@@ -1,0 +1,255 @@
+.BtnSecondary {
+	position: relative;
+	width: 212px;
+	height: 64px;
+	font-weight: 700;
+	background-color: transparent;
+	border: 1px solid #22D3F8;
+	border-radius: 50px;
+	font-size: 1rem;
+	opacity: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.BtnSecondary:hover {
+	background: transparent linear-gradient(91deg, #22D3F8 0%, #FB33D3 100%) 0% 0% no-repeat padding-box;
+}
+
+.BtnMain {
+	font-weight: 700;
+	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 31%, #002988 100%) 0% 0% no-repeat padding-box;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #fff;
+	width: 274px;
+	height: 64px;
+	font-size: 1rem;
+}
+
+.BtnMain:hover {
+	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 89%, #0D51EB 100%) 0% 0% no-repeat padding-box
+}
+
+p {
+	@apply text-2xl;
+}
+
+h2 {
+	@apply mb-10;
+}
+
+section {
+	@apply my-32;
+}
+
+.ToolsIcon {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	margin: 1.25rem 0;
+	cursor: pointer;
+}
+
+.Ocademy {
+	@apply bg-gray_800;
+}
+
+.Ocademy path {
+	@apply fill-gray_900;
+}
+
+.Ocademy:hover {
+	@apply bg-gray_800;
+}
+
+.Olibrary {
+	@apply bg-gray_800;
+}
+
+.Olibrary path {
+	@apply fill-gray_900;
+}
+
+
+.Olibrary:hover {
+	@apply bg-gray_800;
+}
+
+.Home {
+	background: transparent linear-gradient(135deg, #22D3F8 0%, #014EF9 48%, #0031A1 100%) 0% 0% no-repeat padding-box;
+}
+
+.Home:hover path {
+	@apply fill-gray_800;
+}
+
+.swiper-controllers {
+	display: flex;
+	justify-content: space-between;
+	width: 100px;
+}
+
+	>div:not(.swiper-button-disabled) {
+		background-color: #4e4466;
+
+		path {
+			fill: #ffffff;
+		}
+	}
+
+.left, .right {
+	background: #383C5B;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		background-color: #908c9e;
+	}
+
+path {
+			fill: $white;
+		}
+}
+
+.milestone {
+	.main {
+		display: flex;
+		align-items: center;
+		height: 65px;
+	}
+
+	h6 {
+		color: #7F849C;
+		text-align: center;
+		font-size: 0.9rem;
+		margin: 0;
+	}
+
+	.icons {
+		width: 1.5rem;
+		height: 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 8px;
+		margin-right: 10px;
+	}
+
+		&.ostudio {
+			background: transparent linear-gradient(135deg, #FB33D3 0%, #BF03B1 49%, #5D0156 100%) 0% 0% no-repeat padding-box
+		}
+
+		&.ocademy {
+			background: transparent linear-gradient(134deg, #00FFA8 0%, #10DB96 38%, #067A55 100%) 0% 0% no-repeat padding-box
+		}
+
+		&.ovnet {
+			background: transparent linear-gradient(135deg, #22D3F8 0%, #014EF9 48%, #0031a1 100%) 0% 0% no-repeat padding-box
+		}
+
+		&.orchives {
+			background: transparent linear-gradient(135deg, #f1d740 0%, #f4883b 51%, #db4220 100%) 0% 0% no-repeat padding-box
+		}
+
+		&.oviron-space {
+			background: transparent linear-gradient(225deg, #F1D740 0%, #F4883B 11%, #BF03B1 26%, #014ef9 82%, #22d3f8 100%) 0% 0% no-repeat padding-box
+		}
+}
+
+.range {
+	margin-top: 32px;
+
+	&--step1 h6 span {
+		color: #22D3F8
+	}
+	&--step2 h6 span {
+		color: #014EF9;
+	}
+	&--step3 h6 span {
+		color: #bf06b1
+	}
+	&--step4 h6 span {
+		color: #FB33D3
+	}
+	&--step5 h6 span {
+		color: #DB4220
+	}
+	&--step6 h6 span {
+		color: #F1D740;
+	}
+
+	ul {
+		padding: 0;
+	}
+	li:not(.main) {
+		margin-left: 55px;
+		list-style-type: disc;
+	}
+}
+
+.swiper-pagination {
+	width: 100%;
+	height: 1rem;
+	border-radius: 8px;
+	background-color: #5D617D;
+}
+
+	.zero,
+	.one,
+	.two,
+	.three,
+	.four,
+	.five {
+		background-color: #22D3F8;
+		height: 1rem;
+		border-radius: 8px;
+	}
+
+	.zero {
+		width: 3%
+	}
+
+	.one {
+		width: 20%;
+	}
+	.two {
+		width: 40%
+	}
+	.three {
+		width: 60%
+	}
+	.four {
+		width: 80%
+	}
+	.five {
+		width: 100%
+	}
+
+.bar {
+	content: ' ';
+	width: 100%;
+	height: 1rem;
+	background-color: #5D617D;
+	border-radius: 8px;
+}
+
+.ranges {
+	display: flex;
+	overflow: hidden;
+}
