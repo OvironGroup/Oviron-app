@@ -51,13 +51,20 @@ section {
 }
 
 .ToolsIcon {
-	width: 45px;
-	height: 45px;
+	padding: 8px;
+	width: 37px;
+	height: 37px;
+	box-sizing: content-box;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 8px;
 	cursor: pointer;
+}
+
+.ToolsIcon path {
+	width: 10px;
+	height: 10px;
 }
 
 .swiper-controllers {
