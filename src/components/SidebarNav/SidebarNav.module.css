@@ -1,0 +1,43 @@
+.Ocademy {
+	@apply bg-gray_800;
+}
+
+.Ocademy path {
+	@apply fill-gray_900;
+}
+
+.Ocademy:hover {
+	@apply bg-gray_800;
+}
+
+.Olibrary {
+	@apply bg-gray_800;
+}
+
+.Olibrary path {
+	@apply fill-gray_900;
+}
+
+
+.Olibrary:hover {
+	@apply bg-gray_800;
+}
+
+.ToolsIcon {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	cursor: pointer;
+	@apply my-4;
+}
+
+.Home {
+	background: transparent linear-gradient(135deg, #22D3F8 0%, #014EF9 48%, #0031A1 100%) 0% 0% no-repeat padding-box;
+}
+
+.Home:hover path {
+	@apply fill-gray_800;
+}

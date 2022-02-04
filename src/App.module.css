@@ -57,41 +57,7 @@ section {
 	align-items: center;
 	justify-content: center;
 	border-radius: 8px;
-	margin: 1.25rem 0;
 	cursor: pointer;
-}
-
-.Ocademy {
-	@apply bg-gray_800;
-}
-
-.Ocademy path {
-	@apply fill-gray_900;
-}
-
-.Ocademy:hover {
-	@apply bg-gray_800;
-}
-
-.Olibrary {
-	@apply bg-gray_800;
-}
-
-.Olibrary path {
-	@apply fill-gray_900;
-}
-
-
-.Olibrary:hover {
-	@apply bg-gray_800;
-}
-
-.Home {
-	background: transparent linear-gradient(135deg, #22D3F8 0%, #014EF9 48%, #0031A1 100%) 0% 0% no-repeat padding-box;
-}
-
-.Home:hover path {
-	@apply fill-gray_800;
 }
 
 .swiper-controllers {
@@ -150,26 +116,46 @@ path {
 		border-radius: 8px;
 		margin-right: 10px;
 	}
+}
 
-		&.ostudio {
-			background: transparent linear-gradient(135deg, #FB33D3 0%, #BF03B1 49%, #5D0156 100%) 0% 0% no-repeat padding-box
-		}
+.Ostudio {
+	background: transparent linear-gradient(135deg, #FB33D3 0%, #BF03B1 49%, #5D0156 100%) 0% 0% no-repeat padding-box
+}
 
-		&.ocademy {
-			background: transparent linear-gradient(134deg, #00FFA8 0%, #10DB96 38%, #067A55 100%) 0% 0% no-repeat padding-box
-		}
+.Ostudio path {
+	fill: #ffffff;
+}
 
-		&.ovnet {
-			background: transparent linear-gradient(135deg, #22D3F8 0%, #014EF9 48%, #0031a1 100%) 0% 0% no-repeat padding-box
-		}
+.Ocademy {
+	background: transparent linear-gradient(134deg, #00FFA8 0%, #10DB96 38%, #067A55 100%) 0% 0% no-repeat padding-box
+}
 
-		&.orchives {
-			background: transparent linear-gradient(135deg, #f1d740 0%, #f4883b 51%, #db4220 100%) 0% 0% no-repeat padding-box
-		}
+.Ocademy path {
+	fill: #ffffff;
+}
 
-		&.oviron-space {
-			background: transparent linear-gradient(225deg, #F1D740 0%, #F4883B 11%, #BF03B1 26%, #014ef9 82%, #22d3f8 100%) 0% 0% no-repeat padding-box
-		}
+.Ovnet {
+	background: transparent linear-gradient(135deg, #22D3F8 0%, #014EF9 48%, #0031a1 100%) 0% 0% no-repeat padding-box
+}
+
+.Ovnet path {
+	fill: #ffffff;
+}
+
+.Orchives {
+	background: transparent linear-gradient(135deg, #f1d740 0%, #f4883b 51%, #db4220 100%) 0% 0% no-repeat padding-box
+}
+
+.Orchives path {
+	fill: #ffffff;
+}
+
+.OvironSpace {
+	background: transparent linear-gradient(225deg, #F1D740 0%, #F4883B 11%, #BF03B1 26%, #014ef9 82%, #22d3f8 100%) 0% 0% no-repeat padding-box
+}
+
+.OvironSpace path {
+	fill: #ffffff;
 }
 
 .range {
