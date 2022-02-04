@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Logo, Ocademy, Orchives, Ostudio, OvironSpace, Ovnet } from './icons/icons'
+import { Discord, Github, Logo, Ocademy, Orchives, Ostudio, OvironSpace, Ovnet } from './icons/icons'
 import styles from './App.module.css';
 import SidebarNav from './components/SidebarNav/SidebarNav.view';
 
@@ -386,11 +386,16 @@ const App = () => {
 						<section>
 							<div className="flex">
 								<div className="text-center lg:w-1/2">
-									<h2 className="text-5xl">LET'S DIVE TOGETHER INTO OVIRON.</h2>
-									<p>Be part of growing community of creators and enthusiast to foster indie projects, and the virtual open space. Support us and Stay tuned on our Discord</p>
-									<a href="https://discord.gg/SRwa2WvHKW" className={styles.BtnMain} role="button">Join us</a>
-									<p>Are you a developer and want to support the dev team?</p>
-									<p className="mt-4 flex align-center justify-center"><span>Github</span> <Github /></p>
+									<h2 className="text-5xl text-gray-light">LET'S DIVE <span className="text-white">TOGETHER</span> INTO OVIRON<span className="text-purple">.</span></h2>
+									<p>Be part of growing community of creators and enthusiast to foster indie projects, and the virtual open space.
+										<br />
+										<br />
+										Support us and Stay tuned on our Discord</p>
+									<a href="https://discord.gg/SRwa2WvHKW" className={`my-10 mx-auto ${styles.BtnMain}`} role="button"><span className="mr-3">Join us</span> <Discord /></a>
+									<p className="text-gray-light text-lg">Are you a developer and want to support the dev team?</p>
+									<a className="mt-4 flex align-center justify-center" href="https://github.com/OvironGroup" target="_blank" rel="noreferrer">
+										<span className="mr-3">Github</span> <Github />
+									</a>
 								</div>
 								<div className="lg:w-1/2">
 									<img src={`${process.env.PUBLIC_URL}/portal-guy.png`} alt="portal with guy" srcSet={`${process.env.PUBLIC_URL}/portal-guy@2x.png 2x`} />
@@ -400,6 +405,11 @@ const App = () => {
 					</div>
 				</div>
 			</main>
+			<footer>
+				<div className="text-center p-5">
+					<p className="text-sm">All rights reserved - © 2022 OVIRON GROUP</p>
+				</div>
+			</footer>
 		</div>
 	);
 }
