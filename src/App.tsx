@@ -126,10 +126,13 @@ const App = () => {
 						<section>
 							<div className="flex">
 								<div className="lg:w-1/2">
-									<h2 className="text-5xl">WHY WE BELIEVE IN OVIRON.</h2>
-									<p>OVIRON is an under-development project, aimed to build a community-driven platform with Free open-source solutions for digital & VR content. The sole goal of the project is to empower digital creators, game developers, and VR tech enthusiasts with affordable solutions that can bring them authority over the web, while also fostering collaboration and creativity. The methodology of the project will be based over an open ecosystem, where the community is the head of the project. Support will be provided by the OVIRON core team with transparency delivery and constant integration of new technologies, solutions, and external partnership to help assure the evolution of the platform. The mission is solely to empower digital & VR content creators to gain ownership of their content, privacy of their spaces, and creative encouragement for indie projects. We vision a growth of unity and collaboration between indie creators all around the globe within an open virtual space, to lessen the distance gap. Read more about OVIRON in our Litepaper</p>
+									<h2 className="text-5xl">WHY WE BELIEVE IN OVIRON<span className="text-yellow">.</span></h2>
+									<p>OVIRON is an under-development project, aimed to build a community-driven platform with Free open-source solutions for digital & VR content. The sole goal of the project is to empower digital creators, game developers, and VR tech enthusiasts with affordable solutions that can bring them authority over the web, while also fostering collaboration and creativity.<br /><br />
+										The methodology of the project will be based over an open ecosystem, where the community is the head of the project. Support will be provided by the OVIRON core team with transparency delivery and constant integration of new technologies, solutions, and external partnership to help assure the evolution of the platform.<br /><br />
+										The mission is solely to empower digital & VR content creators to gain ownership of their content, privacy of their spaces, and creative encouragement for indie projects. We vision a growth of unity and collaboration between indie creators all around the globe within an open virtual space, to lessen the distance gap.<br /><br />
+										Read more about OVIRON in our <a href="https://docs.oviron.io/oviron/" className="text-blue-light" target="_blank" rel="noreferrer">Litepaper</a></p>
 								</div>
-								<div className="lg:w-1/2">
+								<div className="lg:w-1/2 flex flex-col justify-center">
 									<img src={`${process.env.PUBLIC_URL}/ecosystem.png`} alt="ecosystem" srcSet={`${process.env.PUBLIC_URL}/ecosystem@2x.png 2x`} />
 								</div>
 							</div>
