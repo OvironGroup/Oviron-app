@@ -1,0 +1,15 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37.055" height="27" viewBox="0 0 37.055 27">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.005" x2="0.5" y2="0.959" gradientUnits="objectBoundingBox">
+      <stop offset="0" stopColor="#f1d740"/>
+      <stop offset="0.45" stopColor="#f4883b"/>
+      <stop offset="1" stopColor="#db4220"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.502" y1="0.005" x2="0.502" y2="0.959" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="books_icon_gradient" data-name="books icon gradient" transform="translate(0.001)">
+    <path id="Path_20" data-name="Path 20" d="M36.93,22.33h0L27.4,2.24A1,1,0,0,0,26,1.71h-.06l-5.68,3a1.11,1.11,0,0,0-.57,1V1.13A1.11,1.11,0,0,0,18.67,0H12.31a1.1,1.1,0,0,0-1.06,1.13V25.87A1.1,1.1,0,0,0,12.31,27h6.36a1.1,1.1,0,0,0,1.06-1.13v-20a1,1,0,0,0,.1.42l9.54,20.09a1.12,1.12,0,0,0,.16.22v.07a1.15,1.15,0,0,0,.26.19l.09.05a1.16,1.16,0,0,0,.31.07h.1a.66.66,0,0,0,.27-.06h.14l5.67-3a1.17,1.17,0,0,0,.56-1.59ZM13.37,6.76V4.5h4.24V6.76ZM23.58,8.9l-1-2,3.68-2.22,1.05,2Z" fill="url(#linear-gradient)"/>
+    <path id="Path_21" data-name="Path 21" d="M7.34,0H1.05A1.09,1.09,0,0,0,0,1.13V25.87A1.09,1.09,0,0,0,1.05,27H7.34a1.08,1.08,0,0,0,1-1.13V1.13A1.08,1.08,0,0,0,7.34,0ZM2.1,6.75V4.5H6.29V6.75Z" fill="url(#linear-gradient-2)"/>
+  </g>
+</svg>
