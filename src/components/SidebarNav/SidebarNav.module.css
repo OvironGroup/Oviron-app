@@ -10,11 +10,11 @@
 	@apply bg-gray_800;
 }
 
-.Olibrary {
+.Orchives {
 	@apply bg-gray_800;
 }
 
-.Olibrary path {
+.Orchives path {
 	@apply fill-gray_900;
 }
 
@@ -40,4 +40,12 @@
 
 .Home:hover path {
 	@apply fill-gray_800;
+}
+
+.Container {
+	@apply fixed;
+	@apply bg-gray_900;
+	@apply px-6;
+	@apply py-4;
+	@apply z-40;
 }

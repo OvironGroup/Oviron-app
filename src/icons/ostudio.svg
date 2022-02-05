@@ -2,9 +2,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38.766" height="27" viewBox="0 0 38.766 27">
   <defs>
     <linearGradient id="linear-gradient" x1="0.872" x2="0.274" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#fb33d3"/>
-      <stop offset="0.481" stop-color="#bf03b1"/>
-      <stop offset="1" stop-color="#5d0156"/>
+      <stop offset="0" stopColor="#fb33d3"/>
+      <stop offset="0.481" stopColor="#bf03b1"/>
+      <stop offset="1" stopColor="#5d0156"/>
     </linearGradient>
   </defs>
   <g id="Ostudio" transform="translate(0)">

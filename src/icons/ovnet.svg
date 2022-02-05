@@ -2,9 +2,9 @@
 <svg id="ovnet_icon" data-name="ovnet icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34.565" height="37" viewBox="0 0 34.565 37">
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#22d3f8"/>
-      <stop offset="0.496" stop-color="#014ef9"/>
-      <stop offset="1" stop-color="#0031a1"/>
+      <stop offset="0" stopColor="#22d3f8"/>
+      <stop offset="0.496" stopColor="#014ef9"/>
+      <stop offset="1" stopColor="#0031a1"/>
     </linearGradient>
   </defs>
   <path id="Path_8" data-name="Path 8" d="M33.57,44.6,32.484,40.26l12.068-8.707L29.039,29.685l-1.085-4.338,23.8,4.425Z" transform="translate(-17.192 -12.436)" fill="url(#linear-gradient)"/>

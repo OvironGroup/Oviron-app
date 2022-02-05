@@ -2,9 +2,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.565" height="35" viewBox="0 0 36.565 35">
   <defs>
     <linearGradient id="linear-gradient" x1="0.365" y1="-2.661" x2="0.5" y2="1.795" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#00ffa8"/>
-      <stop offset="0.515" stop-color="#10db96"/>
-      <stop offset="1" stop-color="#067a55"/>
+      <stop offset="0" stopColor="#00ffa8"/>
+      <stop offset="0.515" stopColor="#10db96"/>
+      <stop offset="1" stopColor="#067a55"/>
     </linearGradient>
     <linearGradient id="linear-gradient-2" x1="0.5" y1="-1.166" x2="0.435" y2="1.053" xlink:href="#linear-gradient"/>
   </defs>

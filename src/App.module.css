@@ -1,19 +1,20 @@
+.BtnMain,
 .BtnSecondary {
-	position: relative;
-	width: 212px;
-	height: 64px;
-	font-weight: 700;
+	border-radius: 50px;
+	@apply flex;
+	@apply items-center;
+	@apply justify-center;
+	@apply no-underline;
+	@apply text-white;
+	@apply text-xl;
+	@apply cursor-pointer;
+	@apply px-10;
+	@apply py-4;
+}
+
+.BtnSecondary {
 	background-color: transparent;
 	border: 1px solid #22D3F8;
-	border-radius: 50px;
-	font-size: 1rem;
-	opacity: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-	text-decoration: none;
-	cursor: pointer;
 }
 
 .BtnSecondary:hover {
@@ -21,17 +22,13 @@
 }
 
 .BtnMain {
-	font-weight: 700;
 	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 31%, #002988 100%) 0% 0% no-repeat padding-box;
-	border-radius: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	color: #fff;
-	width: 274px;
-	height: 64px;
-	font-size: 1rem;
+}
+
+.Body {
+	background: linear-gradient(-45deg, #421435, #22184D);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
 
 .BtnMain:hover {
@@ -39,15 +36,80 @@
 }
 
 p {
-	@apply text-2xl;
+	@apply text-xl;
 }
 
 h2 {
 	@apply mb-10;
+	@apply text-3xl;
+	@apply leading-tight;
 }
 
 section {
-	@apply my-32;
+	@apply mb-28;
+}
+
+.NavigationArrows path {
+	@apply fill-white;
+}
+
+.NavigationArrows svg {
+	background: #383C5B;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	margin: 0 10px;
+	justify-content: center;
+}
+
+.NavigationArrow svg:hover {
+	background-color: #908c9e;
+}
+
+.Zero,
+.One,
+.Two,
+.Three,
+.Four,
+.Five {
+	background-color: #22D3F8;
+	height: 1rem;
+	border-radius: 8px;
+}
+
+.Zero {
+	width: 3%;
+}
+
+.One {
+	width: 20%;
+}
+
+.Two {
+	width: 40%;
+}
+.Three {
+	width: 60%;
+}
+.Four {
+	width: 80%;
+}
+
+.Five {
+	width: 100%;
+}
+
+.Bar {
+	content: ' ';
+	width: 100%;
+	height: 1rem;
+	background-color: #5D617D;
+	border-radius: 8px;
+	@apply mb-5;
 }
 
 .ToolsIcon {
