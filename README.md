@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# Oviron frontend application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+OVIRON, the platform that foster content ownership, creativity, and collaboration between creators and masses.
+
+### Prerequisites
+
+In order to setup the project in your local environment make sure you have:
+
+- node version 16 or above
+
+### Installing
+
+Install the required dependencies running
+
+```
+yarn install
+```
 
 ## Available Scripts
 
@@ -16,31 +30,25 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
+Unit tests are created with [Testing library](https://testing-library.com/) and [Jest](https://jestjs.io/)
 
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This command shouldn't be executed in local environment. It is used by AWS after deploying modification in the main branch.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
 
-### `yarn eject`
+* [React.js](https://reactjs.org/)
+* [Typescript](https://www.typescriptlang.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contributing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
