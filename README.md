@@ -6,6 +6,7 @@ OVIRON is the community-driven platform that fosters creativity, ownership, and 
 
 In order to setup the project in your local environment make sure you have:
 
+- OS: MacOS or Linux
 - node version 16 or above
 
 ### Installing

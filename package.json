@@ -1,6 +1,6 @@
 {
 	"name": "oviron-app",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "Oviron community",
 	"license": "GNU GPL",
 	"maintainers": [
@@ -27,8 +27,9 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
+		"test": "CI=true react-scripts test",
+		"test:watch": "react-scripts test",
+		"coverage": "yarn test --coverage tsx",
 		"lint": "eslint --cache \"src/**/*.{js,jsx,ts,tsx}\"",
 		"lint:fix": "eslint --cache --fix \"src/**/*.{js,jsx,ts,tsx}\""
 	},
@@ -46,8 +47,8 @@
 	"lint-staged": {
 		"*.{ts,tsx}": [
 			"yarn lint:fix",
-			"prettier \"**/*.{ts,js,tsx,md}\" --write",
-			"yarn test"
+			"prettier \"**/*.{ts,tsx}\" --write",
+			"yarn test --watchAll"
 		]
 	},
 	"browserslist": {

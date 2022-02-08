@@ -1,14 +1,15 @@
 {
   "moduleDirectories": ["node_modules"],
   "collectCoverageFrom": [
-    "src/**/*.{ts,tsx}",
+    "src/**/*.{tsx}",
+    "!src/**/*.spec.{js,jsx}",
     "!**/node_modules/**"
   ],
 	"transform": {},
   "coverageDirectory": "coverage/",
   "coverageReporters": ["html", "lcov"],
   "testURL": "http://localhost",
-  "testMatch": ["**/?(*.)+(spec).[jt]s?(x)"],
+  "testMatch": ["**/?(*.)+(test).[jt]s?(x)"],
   "clearMocks": true,
   "restoreMocks": true,
   "resetMocks": true
