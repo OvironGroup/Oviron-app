@@ -31,5 +31,5 @@ export {
 	OvironSpaceWhite,
 	OvnetWhite,
 	ArrowLeft,
-	ArrowRight
+	ArrowRight,
 }
