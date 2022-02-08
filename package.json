@@ -39,13 +39,17 @@
 		]
 	},
 	"husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "yarn run lint:fix"
-  },
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": [
+			"yarn lint:fix",
+			"prettier \"**/*.{ts,js,tsx,md}\" --write",
+			"yarn test"
+		]
+	},
 	"browserslist": {
 		"production": [
 			">0.2%",
@@ -60,6 +64,8 @@
 	},
 	"devDependencies": {
 		"@babel/preset-typescript": "^7.16.7",
+		"@commitlint/cli": "^16.1.0",
+		"@commitlint/config-conventional": "^16.0.0",
 		"@typescript-eslint/eslint-plugin": "^5.10.2",
 		"@typescript-eslint/parser": "^5.10.2",
 		"autoprefixer": "^10.4.2",

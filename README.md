@@ -1,6 +1,6 @@
 # Oviron frontend application
 
-OVIRON, the platform that foster content ownership, creativity, and collaboration between creators and masses.
+OVIRON is the community-driven platform that fosters creativity, ownership, and collaboration between Digital & VR content creators and enthusiasts.
 
 ### Prerequisites
 
@@ -44,6 +44,7 @@ This command shouldn't be executed in local environment. It is used by AWS after
 
 * [React.js](https://reactjs.org/)
 * [Typescript](https://www.typescriptlang.org/)
+* [TailwindCSS](https://tailwindcss.com/)
 
 ## Contributing
 
