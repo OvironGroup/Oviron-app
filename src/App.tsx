@@ -16,7 +16,7 @@ import Roadmap from './views/home/Roadmap.view'
 const App = () => (
 	<div className={`${styles.Body} min-h-full text-white`}>
 		<nav className="bg-white sticky top-0 z-10">
-			<div className="px-3 flex items-center h-16">
+			<div className="px-5 flex items-center h-16">
 				<Logo />
 			</div>
 		</nav>
@@ -28,7 +28,7 @@ const App = () => (
 						<div className="flex bg-animated">
 							<div className="lg:flex lg:justify-center lg:flex-col lg:w-1/2">
 								<h1 className="text-4xl mb-10 leading-tight xl:text-6xl">
-									EMPOWERING CREATORS
+									EMPOWERING CREATORS{' '}
 									<span className="text-gray-medium">&</span> MASSES
 									<span className="text-blue-light">.</span>
 								</h1>
@@ -54,7 +54,7 @@ const App = () => (
 										className={styles.BtnMain}
 										role="button"
 									>
-										Join us
+										<span className="mr-3">Join us</span> <Discord />
 									</a>
 								</div>
 							</div>
@@ -241,7 +241,7 @@ const App = () => (
 									</a>
 								</p>
 							</div>
-							<div className="hidden lg:block lg:w-1/2">
+							<div className="hidden lg:flex lg:items-center lg:w-1/2">
 								<img
 									src={`${process.env.PUBLIC_URL}/ecosystem.png`}
 									alt="ecosystem"

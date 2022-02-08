@@ -1,5 +1,5 @@
 .Ocademy {
-	@apply bg-gray_800;
+	@apply bg-gray_700;
 }
 
 .Ocademy path {
@@ -11,7 +11,7 @@
 }
 
 .Orchives {
-	@apply bg-gray_800;
+	@apply bg-gray_700;
 }
 
 .Orchives path {

@@ -48,7 +48,7 @@
 		"*.{ts,tsx}": [
 			"yarn lint:fix",
 			"prettier \"**/*.{ts,tsx}\" --write",
-			"yarn test --watchAll"
+			"yarn test"
 		]
 	},
 	"browserslist": {

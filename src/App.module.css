@@ -29,6 +29,7 @@
 	background: linear-gradient(-45deg, #421435, #22184D);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+	@apply font-sans;
 }
 
 .BtnMain:hover {
@@ -37,6 +38,15 @@
 
 p {
 	@apply text-xl;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-poppins
 }
 
 h2 {
