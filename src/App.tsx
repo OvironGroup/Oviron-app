@@ -12,6 +12,7 @@ import {
 import styles from './App.module.css'
 import SidebarNav from './components/SidebarNav/SidebarNav.view'
 import Roadmap from './views/home/Roadmap.view'
+import Welcome from './views/home/Welcome.view'
 
 const App = () => (
 	<div className={`${styles.Body} min-h-full text-white`}>
@@ -24,49 +25,7 @@ const App = () => (
 		<main>
 			<div className="max-w-7xl xl:mx-auto p-6 lg:px-8 lg:ml-24">
 				<div className="px-4 py-6 sm:px-0">
-					<section>
-						<div className="flex bg-animated">
-							<div className="lg:flex lg:justify-center lg:flex-col lg:w-1/2">
-								<h1 className="text-4xl mb-10 leading-tight xl:text-6xl">
-									EMPOWERING CREATORS{' '}
-									<span className="text-gray-medium">&</span> MASSES
-									<span className="text-blue-light">.</span>
-								</h1>
-								<p className="leading-9 xl:text-2xl">
-									OVIRON, the platform that foster content ownership,
-									creativity, and collaboration between creators and masses.
-									<br />
-									<br />
-									Discover more about OVIRON
-								</p>
-								<div className="flex mt-10">
-									<a
-										href="https://docs.oviron.io/oviron/"
-										className={`mr-5 ${styles.BtnSecondary}`}
-										role="button"
-										target="_blank"
-										rel="noreferrer"
-									>
-										Litepaper
-									</a>
-									<a
-										href="https://discord.gg/SRwa2WvHKW"
-										className={styles.BtnMain}
-										role="button"
-									>
-										<span className="mr-3">Join us</span> <Discord />
-									</a>
-								</div>
-							</div>
-							<div className="hidden md:block">
-								<img
-									src={`${process.env.PUBLIC_URL}/portal.png`}
-									alt="portal"
-									srcSet={`${process.env.PUBLIC_URL}/portal@2x.png 2x`}
-								/>
-							</div>
-						</div>
-					</section>
+					<Welcome />
 					<section>
 						<div>
 							<div className="text-center mb-8">
@@ -255,8 +214,8 @@ const App = () => (
 						<div className="flex">
 							<div className="text-center lg:w-1/2">
 								<h2 className="text-gray-light xl:leading-tight xl:text-5xl">
-									LET&apos;S DIVE
-									<span className="text-white">TOGETHER</span> INTO OVIRON
+									LET&apos;S DIVE <span className="text-white">TOGETHER</span>{' '}
+									INTO OVIRON
 									<span className="text-purple">.</span>
 								</h2>
 								<p className="leading-9 xl:text-2xl xl:leading-10">
