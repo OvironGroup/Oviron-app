@@ -48,11 +48,10 @@ const Roadmap = (): ReactElement => (
 				}}
 			>
 				<SwiperSlide>
-					<div className="range range--step1 swiper-slide">
+					<div className="range range--step1">
 						<div className="milestone">
-							<h6 className="text-center text-gray-medium mb-5">
-								Milestone
-								<span className="text-blue-light">1</span>
+							<h6 className="text-center text-gray_400 mb-5">
+								Milestone <span className="text-blue_light">1</span>
 							</h6>
 							<ul className="leading-8">
 								<li className="flex items-center my-5">
@@ -64,7 +63,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Orchives
 										<br />
-										<span className="text-gray-medium">
+										<span className="text-gray_400">
 											(Desktop & Mobile launch)
 										</span>
 									</h4>
@@ -81,7 +80,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Ocademy
 										<br />
-										<span className="text-gray-medium">
+										<span className="text-gray_400">
 											(Desktop & Mobile launch)
 										</span>
 									</h4>
@@ -95,11 +94,10 @@ const Roadmap = (): ReactElement => (
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="range range--step2 swiper-slide">
+					<div className="range range--step2">
 						<div className="milestone">
-							<h6 className="text-center text-gray-medium mb-5">
-								Milestone
-								<span className="text-blue">2</span>
+							<h6 className="text-center text-gray_400 mb-5">
+								Milestone <span className="text-blue_primary">2</span>
 							</h6>
 							<ul className="leading-8">
 								<li className="flex items-center my-5">
@@ -109,7 +107,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Ovnet v.1
 										<br />
-										<span className="text-gray-medium">
+										<span className="text-gray_400">
 											(Desktop & Mobile launch)
 										</span>
 									</h4>
@@ -133,7 +131,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Orchives XR Update
 										<br />
-										<span className="text-gray-medium">(VR / AR launch)</span>
+										<span className="text-gray_400">(VR / AR launch)</span>
 									</h4>
 								</li>
 								<li className="flex items-center my-5">
@@ -143,7 +141,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Ocademy XR Update
 										<br />
-										<span className="text-gray-medium">(VR / AR launch)</span>
+										<span className="text-gray_400">(VR / AR launch)</span>
 									</h4>
 								</li>
 							</ul>
@@ -153,9 +151,8 @@ const Roadmap = (): ReactElement => (
 				<SwiperSlide>
 					<div className="range range--step3 swiper-slide">
 						<div className="milestone">
-							<h6 className="text-center text-gray-medium mb-5">
-								Milestone
-								<span className="text-purple">3</span>
+							<h6 className="text-center text-gray_400 mb-5">
+								Milestone <span className="text-magenta_primary">3</span>
 							</h6>
 							<h3>Custom user dashboards</h3>
 							<ul className="leading-8">
@@ -166,7 +163,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										OStudio BETA
 										<br />
-										<span className="text-gray-medium">
+										<span className="text-gray_400">
 											(Desktop / Mobile Beta)
 										</span>
 									</h4>
@@ -182,7 +179,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Ovnet V.2
 										<br />
-										<span className="text-gray-medium">
+										<span className="text-gray_400">
 											(Desktop & mobile update)
 										</span>
 									</h4>
@@ -196,11 +193,10 @@ const Roadmap = (): ReactElement => (
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="range range--step4 swiper-slide">
+					<div className="range range--step4">
 						<div className="milestone">
-							<h6 className="text-center text-gray-medium mb-5">
-								Milestone
-								<span className="text-purple">4</span>
+							<h6 className="text-center text-gray_400 mb-5">
+								Milestone <span className="text-magenta_light">4</span>
 							</h6>
 							<h3>
 								Plugins creations for Ovnet, Orchives, and Ocademy (OStudio in
@@ -214,9 +210,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										OStudio
 										<br />
-										<span className="text-gray-medium">
-											Desktop/Mobile Launch
-										</span>
+										<span className="text-gray_400">Desktop/Mobile Launch</span>
 									</h4>
 								</li>
 								<li>- Simplified environment & tools for beginners.</li>
@@ -238,7 +232,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Ovnet XR Update
 										<br />
-										<span className="text-gray-medium">(VR / AR launch)</span>
+										<span className="text-gray_400">(VR / AR launch)</span>
 									</h4>
 								</li>
 							</ul>
@@ -246,11 +240,10 @@ const Roadmap = (): ReactElement => (
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="range range--step5 swiper-slide">
+					<div className="range range--step5">
 						<div className="milestone">
-							<h6 className="text-center text-gray-medium mb-5">
-								Milestone
-								<span className="text-orange">5</span>
+							<h6 className="text-center text-gray_400 mb-5">
+								Milestone <span className="text-ochre_primary">5</span>
 							</h6>
 							<ul className="leading-8">
 								<li className="flex items-center my-5">
@@ -262,7 +255,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Oviron Space BETA
 										<br />
-										<span className="text-gray-medium">
+										<span className="text-gray_400">
 											Desktop / Mobile Launch
 										</span>
 									</h4>
@@ -286,7 +279,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										OStudio XR BETA
 										<br />
-										<span className="text-gray-medium">(VR / AR Launch)</span>
+										<span className="text-gray_400">(VR / AR Launch)</span>
 									</h4>
 								</li>
 							</ul>
@@ -294,11 +287,10 @@ const Roadmap = (): ReactElement => (
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="range range--step6 swiper-slide">
+					<div className="range range--step6">
 						<div className="milestone">
-							<h6 className="text-center text-gray-medium mb-5">
-								Milestone
-								<span className="text-yellow">6</span>
+							<h6 className="text-center text-gray_400 mb-5">
+								Milestone <span className="text-ochre_light">6</span>
 							</h6>
 							<ul className="leading-8">
 								<li className="flex items-center my-5">
@@ -310,7 +302,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										Oviron Space OPEN!
 										<br />
-										<span className="text-gray-medium">
+										<span className="text-gray_400">
 											Desktop / Mobile Launch
 										</span>
 									</h4>
@@ -337,7 +329,7 @@ const Roadmap = (): ReactElement => (
 									<h4 className="text-xl">
 										OStudio XR
 										<br />
-										<span className="text-gray-medium">(VR / AR Launch)</span>
+										<span className="text-gray_400">(VR / AR Launch)</span>
 									</h4>
 								</li>
 							</ul>

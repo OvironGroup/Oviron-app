@@ -6,21 +6,12 @@
 	@apply fill-gray_900;
 }
 
-.Ocademy:hover {
-	@apply bg-gray_800;
-}
-
 .Orchives {
 	@apply bg-gray_700;
 }
 
 .Orchives path {
 	@apply fill-gray_900;
-}
-
-
-.Olibrary:hover {
-	@apply bg-gray_800;
 }
 
 .ToolsIcon {

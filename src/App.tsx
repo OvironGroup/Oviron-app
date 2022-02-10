@@ -10,9 +10,9 @@ import {
 	Ovnet,
 } from './icons/icons'
 import styles from './App.module.css'
-import SidebarNav from './components/SidebarNav/SidebarNav.view'
-import Roadmap from './views/home/Roadmap.view'
-import Welcome from './views/home/Welcome.view'
+import { SidebarNav } from './components'
+import Roadmap from './pages/home/Roadmap.view'
+import Welcome from './pages/home/Welcome.view'
 
 const App = () => (
 	<div className={`${styles.Body} min-h-full text-white`}>
@@ -257,7 +257,7 @@ const App = () => (
 			</div>
 		</main>
 		<footer>
-			<div className="text-center p-5">
+			<div className="text-center p-5 pb-32 lg:pb-5">
 				<p className="text-sm">All rights reserved - © 2022 OVIRON GROUP</p>
 			</div>
 		</footer>

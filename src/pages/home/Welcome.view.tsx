@@ -17,10 +17,10 @@ const Welcome = (): ReactElement => (
 					<br />
 					Discover more about OVIRON
 				</p>
-				<div className="flex flex-col lg:flex-row mt-10">
+				<div className="flex flex-col lg:flex-row md:flex-row mt-10">
 					<a
 						href="https://docs.oviron.io/oviron/"
-						className={`mb-5 lg:mr-5 lg:mb-0 ${styles.BtnSecondary}`}
+						className={`mb-5 lg:mr-5 lg:mb-0 md:mr-5 md:mb-0 ${styles.BtnSecondary}`}
 						role="button"
 						target="_blank"
 						rel="noreferrer"
