@@ -1,0 +1,154 @@
+.BtnMain,
+.BtnSecondary {
+	border-radius: 50px;
+	@apply flex;
+	@apply items-center;
+	@apply justify-center;
+	@apply no-underline;
+	@apply text-white;
+	@apply text-xl;
+	@apply cursor-pointer;
+	@apply px-10;
+	@apply py-4;
+}
+
+section {
+	@apply mb-28;
+}
+
+.ToolsIcon {
+	padding: 8px;
+	width: 37px;
+	height: 37px;
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.ToolsIcon path {
+	width: 10px;
+	height: 10px;
+}
+
+.BtnSecondary {
+	background-color: transparent;
+	border: 1px solid #22D3F8;
+}
+
+.BtnMain:hover {
+	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 89%, #0D51EB 100%) 0% 0% no-repeat padding-box
+}
+
+.BtnSecondary:hover {
+	background: transparent linear-gradient(91deg, #22D3F8 0%, #FB33D3 100%) 0% 0% no-repeat padding-box;
+}
+
+.BtnMain {
+	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 31%, #002988 100%) 0% 0% no-repeat padding-box;
+}
+
+.NavigationArrows path {
+	@apply fill-white;
+}
+
+.NavigationArrows svg {
+	background: #383C5B;
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	margin: 0 10px;
+	justify-content: center;
+}
+
+.NavigationArrow svg:hover {
+	background-color: #908c9e;
+}
+
+.Zero,
+.One,
+.Two,
+.Three,
+.Four,
+.Five {
+	background-color: #22D3F8;
+	height: 1rem;
+	border-radius: 8px;
+}
+
+.Zero {
+	width: 3%;
+}
+
+.One {
+	width: 20%;
+}
+
+.Two {
+	width: 40%;
+}
+.Three {
+	width: 60%;
+}
+.Four {
+	width: 80%;
+}
+
+.Five {
+	width: 100%;
+}
+
+.Bar {
+	content: ' ';
+	width: 100%;
+	height: 1rem;
+	background-color: #5D617D;
+	border-radius: 8px;
+	@apply mb-5;
+}
+
+.Ostudio {
+	background: transparent linear-gradient(135deg, #FB33D3 0%, #BF03B1 49%, #5D0156 100%) 0% 0% no-repeat padding-box
+}
+
+.Ostudio path {
+	fill: #ffffff;
+}
+
+.Ocademy {
+	background: transparent linear-gradient(134deg, #00FFA8 0%, #10DB96 38%, #067A55 100%) 0% 0% no-repeat padding-box
+}
+
+.Ocademy path {
+	fill: #ffffff;
+}
+
+.Ovnet {
+	background: transparent linear-gradient(135deg, #22D3F8 0%, #014EF9 48%, #0031a1 100%) 0% 0% no-repeat padding-box
+}
+
+.Ovnet path {
+	fill: #ffffff;
+}
+
+.Orchives {
+	background: transparent linear-gradient(135deg, #f1d740 0%, #f4883b 51%, #db4220 100%) 0% 0% no-repeat padding-box
+}
+
+.Orchives path {
+	fill: #ffffff;
+}
+
+.OvironSpace {
+	background: transparent linear-gradient(225deg, #F1D740 0%, #F4883B 11%, #BF03B1 26%, #014ef9 82%, #22d3f8 100%) 0% 0% no-repeat padding-box
+}
+
+.OvironSpace path {
+	fill: #ffffff;
+}

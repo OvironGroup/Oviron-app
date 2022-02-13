@@ -1,6 +1,5 @@
-import React from 'react'
 import { screen, render } from '@testing-library/react'
-import Welcome from './pages/home/Welcome.view'
+import Welcome from './pages/unauthenticated/home/Welcome.view'
 
 describe('<App />', () => {
 	test('should have the right discord link in the button link', () => {

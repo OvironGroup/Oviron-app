@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import {
 	ArrowLeft,
 	ArrowRight,
@@ -7,12 +7,12 @@ import {
 	OstudioWhite,
 	OcademyWhite,
 	OvironSpaceWhite,
-} from '../../icons/icons'
+} from '../../../icons/icons'
 import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import styles from '../../App.module.css'
+import styles from './Home.module.css'
 
 const Roadmap = (): ReactElement => (
 	<section>

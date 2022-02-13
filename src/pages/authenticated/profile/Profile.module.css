@@ -1,0 +1,5 @@
+.Cover {
+	@apply w-full;
+	@apply h-56;
+	@apply bg-blue_light;
+}

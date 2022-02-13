@@ -14,6 +14,10 @@ import { ReactComponent as OcademyWhite } from './ocademy-white.svg'
 import { ReactComponent as OvnetWhite } from './ovnet-white.svg'
 import { ReactComponent as ArrowRight } from './arrow-right.svg'
 import { ReactComponent as ArrowLeft } from './arrow-left.svg'
+import { ReactComponent as Logout } from './logout.svg'
+import { ReactComponent as User } from './user.svg'
+import { ReactComponent as UserOutline } from './user-outline.svg'
+import { ReactComponent as Home } from './home.svg'
 
 export {
 	Logo,
@@ -32,4 +36,8 @@ export {
 	OvnetWhite,
 	ArrowLeft,
 	ArrowRight,
+	User,
+	Logout,
+	UserOutline,
+	Home,
 }

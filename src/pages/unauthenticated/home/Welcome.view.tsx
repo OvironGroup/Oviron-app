@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react'
-import { Discord } from '../../icons/icons'
-import styles from '../../App.module.css'
+import { ReactElement } from 'react'
+import { Discord } from 'icons/icons'
+import styles from './Home.module.css'
 
 const Welcome = (): ReactElement => (
 	<section>

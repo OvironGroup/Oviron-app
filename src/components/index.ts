@@ -1,3 +1,4 @@
-import SidebarNav from './SidebarNav/SidebarNav.view'
+import SidebarNavView from './SidebarNav/SidebarNav.view'
+import HeaderNavContainer from './HeaderNav/HeaderNav.container'
 
-export { SidebarNav }
+export { SidebarNavView, HeaderNavContainer }
