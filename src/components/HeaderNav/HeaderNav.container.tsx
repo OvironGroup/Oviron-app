@@ -1,23 +1,37 @@
 import { ReactElement } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Logo, Logout, User } from 'icons/icons'
+import { ButtonView } from 'components'
 import styles from './HeaderNav.module.css'
 
-const HeaderNavContainer = (): ReactElement => {
-	const { loginWithRedirect, isAuthenticated, logout } = useAuth0()
+interface Props {
+	authenticated: boolean
+}
+
+const HeaderNavContainer = ({ authenticated }: Props): ReactElement => {
+	const { loginWithRedirect, logout } = useAuth0()
 
 	return (
-		<nav className="bg-white sticky top-0 z-10 h-16 flex items-center">
-			<div className="px-5 flex justify-between w-screen">
+		<nav className={styles.Container}>
+			<div className="px-5 flex justify-between items-center w-screen">
 				<Logo />
-				{isAuthenticated ? (
-					<button onClick={() => logout()} title="Logout">
+				{authenticated ? (
+					<div
+						data-testid="logout_icon"
+						role="button"
+						onClick={() => logout()}
+						title="Logout"
+					>
 						<Logout />
-					</button>
+					</div>
 				) : (
-					<button onClick={loginWithRedirect} className={styles.LoginBtn}>
+					<ButtonView
+						dataTestId="login_btn"
+						onClick={loginWithRedirect}
+						className={styles.LoginBtn}
+					>
 						<User /> <span className="ml-2">Login</span>
-					</button>
+					</ButtonView>
 				)}
 			</div>
 		</nav>

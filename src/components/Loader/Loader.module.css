@@ -1,0 +1,22 @@
+.Loader {
+  -webkit-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+	@apply ease-linear;
+	@apply rounded-full;
+	@apply border-8;
+	@apply border-t-8;
+	@apply border-gray_200;
+	border-top-color: #3498db;
+	@apply h-20;
+	@apply w-20;
+}
+
+@-webkit-keyframes spinner {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

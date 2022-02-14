@@ -1,9 +1,13 @@
-.LoginBtn {
-	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 31%, #002988 100%) 0% 0% no-repeat padding-box;
-	@apply p-3;
-	@apply rounded-3xl;
+.Container {
+	@apply bg-white;
+	@apply sticky;
+	@apply top-0;
+	@apply z-10;
+	@apply h-16;
 	@apply flex;
 	@apply items-center;
-	@apply justify-center;
+}
+
+.LoginBtn {
 	@apply w-28;
 }

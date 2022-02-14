@@ -1,9 +1,12 @@
-import { useAuth0 } from '@auth0/auth0-react'
+import { User } from '@auth0/auth0-react'
 import { ReactElement } from 'react'
 import styles from './Profile.module.css'
 
-const ProfileContainer = (): ReactElement => {
-	const { user } = useAuth0()
+interface Props {
+	user: User | undefined
+}
+
+const ProfileContainer = ({ user }: Props): ReactElement => {
 	return (
 		<div>
 			<div className={styles.Cover}></div>
