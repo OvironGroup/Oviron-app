@@ -30,7 +30,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test --watchAll=false",
 		"test:watch": "react-scripts test",
-		"coverage": "yarn test --coverage tsx",
+		"coverage": "yarn test -- --coverage --watchAll=false",
 		"lint": "eslint --cache \"src/**/*.{ts,tsx}\"",
 		"lint:fix": "eslint --cache --fix \"src/**/*.{ts,tsx}\""
 	},
@@ -42,14 +42,14 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged"
+			"pre-commit": "lint-staged",
+			"pre-push": "yarn test"
 		}
 	},
 	"lint-staged": {
 		"*.{ts,tsx}": [
 			"yarn lint:fix",
-			"prettier \"**/*.{ts,tsx}\" --write",
-			"yarn test"
+			"prettier \"**/*.{ts,tsx}\" --write"
 		]
 	},
 	"browserslist": {
