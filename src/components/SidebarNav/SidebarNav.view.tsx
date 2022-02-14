@@ -16,7 +16,7 @@ const SidebarNav = ({ authenticated, user }: Props): ReactElement => (
 			{authenticated && (
 				<li>
 					<Link to={profile_url} title={user?.name}>
-						<div className={styles.UserLoggedIcon}>
+						<div data-testid="logged_icon" className={styles.UserLoggedIcon}>
 							<UserOutline />
 						</div>
 					</Link>
