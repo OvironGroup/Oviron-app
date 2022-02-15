@@ -43,18 +43,13 @@
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged",
-			"pre-push": "run-tests"
+			"pre-push": "yarn test"
 		}
 	},
 	"lint-staged": {
 		"*.{ts,tsx}": [
 			"yarn lint:fix",
 			"prettier \"**/*.{ts,tsx}\" --write"
-		]
-	},
-	"run-tests": {
-		"*.tsx": [
-			"yarn test"
 		]
 	},
 	"browserslist": {
