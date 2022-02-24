@@ -11,3 +11,24 @@
 .LoginBtn {
 	@apply w-28;
 }
+
+.ProfileNavigationWrapper {
+	@apply flex;
+	@apply w-auto;
+	@apply text-gray_800;
+	@apply justify-evenly;
+	@apply items-center;
+	@apply mr-10;
+	@apply bg-gray_200;
+	@apply rounded-2xl;
+}
+
+.ProfileNavigationWrapper a {
+	@apply p-3;
+}
+
+a[class="active"] {
+	@apply text-white;
+	@apply rounded-2xl;
+	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 31%, #002988 100%) 0% 0% no-repeat padding-box;
+}

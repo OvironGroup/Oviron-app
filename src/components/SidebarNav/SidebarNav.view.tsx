@@ -2,8 +2,8 @@ import { ReactElement } from 'react'
 import { User } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom'
 import { Ocademy, Orchives, UserOutline, Home } from '../../icons/icons'
-import { profile_url } from 'pages/authenticated/profile/Profile.routes'
 import styles from './SidebarNav.module.css'
+import { summary } from 'routes'
 
 interface Props {
 	authenticated: boolean
@@ -15,7 +15,7 @@ const SidebarNav = ({ authenticated, user }: Props): ReactElement => (
 		<ul className="p-0 m-0 flex justify-evenly items-center lg:block">
 			{authenticated && (
 				<li>
-					<Link to={profile_url} title={user?.name}>
+					<Link to={summary} title={user?.name}>
 						<div data-testid="logged_icon" className={styles.UserLoggedIcon}>
 							<UserOutline />
 						</div>

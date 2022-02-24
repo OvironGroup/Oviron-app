@@ -5,15 +5,17 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { config } from 'App.config'
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Auth0Provider
-			domain="oviron.eu.auth0.com"
-			clientId="5c0fjedvcbgRgUSxnY4C6njow7Ir5Vea"
+			domain={config.DOMAIN}
+			clientId={config.CLIENT_ID}
 			redirectUri={window.location.origin}
-			scope="read:current_user update:current_user_metadata"
+			scope={config.SCOPES}
 			cacheLocation="localstorage"
+			audience={config.AUDIENCE}
 			useRefreshTokens={true}
 		>
 			<BrowserRouter>

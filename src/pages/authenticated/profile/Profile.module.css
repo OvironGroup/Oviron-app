@@ -3,3 +3,15 @@
 	@apply h-56;
 	@apply bg-blue_light;
 }
+
+.Sidebar {
+	@apply lg:shadow-2xl;
+	@apply bg-white;
+	@apply text-gray_900;
+	@apply lg:w-1/4;
+	@apply h-fit;
+	@apply rounded-2xl;
+	@apply p-5;
+	@apply lg:relative;
+	@apply lg:bottom-20;
+}
