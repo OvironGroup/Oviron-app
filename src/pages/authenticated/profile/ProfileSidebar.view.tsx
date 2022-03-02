@@ -16,7 +16,7 @@ const ProfileSidebar = ({ user, metadata }: Props): ReactElement => (
 			</div>
 			<div className="ml-3">
 				<ul>
-					<li className="text-lg text-gray_900">{user?.name}</li>
+					<li className="text-lg text-gray_900">{metadata?.nickname}</li>
 					<li>{metadata?.title}</li>
 					<li>{`${metadata?.city}, ${metadata?.nation}`}</li>
 				</ul>
