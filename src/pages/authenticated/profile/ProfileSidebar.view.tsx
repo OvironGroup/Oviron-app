@@ -12,7 +12,7 @@ const ProfileSidebar = ({ user, metadata }: Props): ReactElement => (
 	<div className={styles.Sidebar}>
 		<div className="flex">
 			<div className="rounded-md w-32">
-				<img src={user?.picture} className="rounded-full" />
+				<img src={metadata?.picture || user?.picture} className="rounded-full" />
 			</div>
 			<div className="ml-3">
 				<ul>

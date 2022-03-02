@@ -10,6 +10,7 @@ type SocialsType = {
 }
 
 export type MetadataType = {
+	picture: string
 	about: string
 	interests: string[]
 	nickname: string
