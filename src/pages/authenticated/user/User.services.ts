@@ -29,12 +29,11 @@ export default {
 		try {
 			const userDetails = `${config.BASE_API}/users/${user?.sub}`
 
-			return await axios.patch(userDetails, {
+			return await axios.patch(userDetails, data, {
 				headers: {
 					'content-type': 'application/json',
 					Authorization: `Bearer ${token}`,
 				},
-				data,
 			})
 		} catch (e) {
 			console.log(e)

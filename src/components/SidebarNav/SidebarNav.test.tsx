@@ -1,7 +1,7 @@
 import { screen, render } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
 import '@testing-library/jest-dom'
 import SidebarNavView from './SidebarNav.view'
+import { MemoryRouter } from 'react-router-dom'
 
 const initialProps = {
 	authenticated: false,
@@ -20,9 +20,9 @@ describe('<SidebarNav />', () => {
 		}
 
 		render(
-			<BrowserRouter>
+			<MemoryRouter>
 				<SidebarNavView {...props} />
-			</BrowserRouter>
+			</MemoryRouter>
 		)
 
 		const userLoggedIcon = screen.getByTestId('logged_icon')

@@ -7,6 +7,24 @@
 }
 
 
-.BtnPrimary {
+.BtnPrimaryGradient {
 	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 31%, #002988 100%) 0% 0% no-repeat padding-box;
+}
+
+.BtnPrimary {
+	@apply bg-blue_primary
+}
+
+.BtnPrimaryOutline {
+	@apply border-2;
+	@apply border-blue_primary
+}
+
+.BtnDangerOutline {
+	@apply border-2;
+	@apply border-y-ochre_dark
+}
+
+.BtnDanger {
+	@apply bg-ochre_dark
 }

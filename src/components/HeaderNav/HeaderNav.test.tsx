@@ -1,5 +1,5 @@
 import { screen, render } from '@testing-library/react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 import HeaderNavContainer from './HeaderNav.container'
 
 const initialProps = {
@@ -14,9 +14,9 @@ describe('<HeaderNavContainer />', () => {
 		}
 
 		render(
-			<Router>
+			<MemoryRouter>
 				<HeaderNavContainer {...props} />
-			</Router>
+			</MemoryRouter>
 		)
 
 		const logoutIcon = screen.getByTestId('logout_icon')
@@ -25,11 +25,7 @@ describe('<HeaderNavContainer />', () => {
 	})
 
 	test('should display login button when not authenticated', () => {
-		render(
-			<Router>
-				<HeaderNavContainer {...initialProps} />
-			</Router>
-		)
+		render(<HeaderNavContainer {...initialProps} />)
 
 		const loginBtn = screen.getByTestId('login_btn')
 

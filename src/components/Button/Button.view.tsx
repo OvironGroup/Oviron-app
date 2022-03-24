@@ -2,11 +2,13 @@ import { FC, ReactElement, ReactNode } from 'react'
 import cn from 'classnames'
 import styles from './Button.module.css'
 
-const PRIMARY = 'Primary'
-const SECONDARY = 'Secondary'
+const PRIMARY = 'primary'
+const OUTLINE = 'outline'
+const DANGER_OUTLINE = 'danger_outline'
+const DANGER = 'danger'
 
 interface Props {
-	type?: typeof PRIMARY | typeof SECONDARY
+	type?: typeof PRIMARY | typeof OUTLINE | typeof DANGER_OUTLINE | typeof DANGER
 	onClick: () => void
 	children: ReactNode
 	title?: string
@@ -14,7 +16,7 @@ interface Props {
 	dataTestId?: string
 }
 
-const ButtonView: FC<Props> = ({
+const Button: FC<Props> = ({
 	children,
 	type = PRIMARY,
 	onClick,
@@ -24,7 +26,9 @@ const ButtonView: FC<Props> = ({
 }: Props): ReactElement => {
 	const BtnBackground = cn({
 		BtnPrimary: type === PRIMARY,
-		BtnSecondary: type === SECONDARY,
+		BtnOutline: type === OUTLINE,
+		BtnDangerOutline: type === DANGER_OUTLINE,
+		BtnDanger: type === DANGER,
 	})
 
 	return (
@@ -40,4 +44,4 @@ const ButtonView: FC<Props> = ({
 	)
 }
 
-export default ButtonView
+export default Button

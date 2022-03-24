@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Auth0Provider } from '@auth0/auth0-react'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
@@ -14,12 +14,14 @@ ReactDOM.render(
 			clientId={config.CLIENT_ID}
 			redirectUri={window.location.origin}
 			scope={config.SCOPES}
-			cacheLocation="localstorage"
 			audience={config.AUDIENCE}
 			useRefreshTokens={true}
+			cacheLocation="localstorage"
 		>
 			<BrowserRouter>
-				<App />
+				<Routes>
+					<Route path="*" element={<App />} />
+				</Routes>
 			</BrowserRouter>
 		</Auth0Provider>
 	</React.StrictMode>,

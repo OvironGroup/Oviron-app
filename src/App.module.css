@@ -18,6 +18,41 @@ h4 {
 	@apply font-semibold; 
 }
 
+label {
+	@apply font-bold;
+}
+
+.Chips {
+	
+}
+
+:global(.pi-times-circle)::before {
+	content: 'x'
+}
+
+:global(.p-chips .p-chips-multiple-container) {
+	padding: 3px 5px;
+}
+
+:global(.p-chips .p-chips-multiple-container .p-chips-token) {
+	padding: 4px;
+}
+
+:global(.p-inputtext) {
+	width: 100%;
+}
+
+input,
+textarea {
+	@apply block;
+	@apply w-full;
+	@apply px-3;
+	@apply py-1.5;
+	@apply border;
+	@apply border-solid;
+	@apply border-gray_300;
+	@apply rounded;
+}
 h1,
 h2,
 h3,

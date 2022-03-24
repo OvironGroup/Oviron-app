@@ -19,7 +19,10 @@ const ProfileNavigation = (): ReactElement => (
 			<NavLink to={assets}>Assets</NavLink>
 			<NavLink to={classroom}>Classroom</NavLink>
 		</ul>
-		<NavLink to={editProfile} className="bg-blue_primary rounded-md p-3">
+		<NavLink
+			to={`${editProfile}/account`}
+			className="bg-blue_primary rounded-md p-3"
+		>
 			Edit Profile
 		</NavLink>
 	</div>

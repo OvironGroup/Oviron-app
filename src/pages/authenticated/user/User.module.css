@@ -1,7 +1,7 @@
 .Cover {
 	@apply w-full;
 	@apply h-56;
-	@apply bg-blue_light;
+	background: transparent linear-gradient(97deg, #D0B620 0%, #820078 15%, #0D4CD9 80%, #0031A1 100%) 0% 0% no-repeat padding-box;
 }
 
 .Sidebar {

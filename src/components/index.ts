@@ -1,6 +1,6 @@
 import SidebarNavView from './SidebarNav/SidebarNav.view'
 import HeaderNavContainer from './HeaderNav/HeaderNav.container'
-import ButtonView from './Button/Button.view'
-import LoaderView from './Loader/Loader.view'
+import Button from './Button/Button.view'
+import Loader from './Loader/Loader.view'
 
-export { LoaderView, ButtonView, SidebarNavView, HeaderNavContainer }
+export { Loader, Button, SidebarNavView, HeaderNavContainer }

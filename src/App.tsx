@@ -1,20 +1,14 @@
-import { lazy, Suspense } from 'react'
-import { Route, Routes, Navigate } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import './App.module.css'
-import { LoaderView, SidebarNavView } from './components'
-import HeaderNavView from 'components/HeaderNav/HeaderNav.container'
-import { EDIT_PROFILE, HOME, routes, SUMMARY } from 'routes'
-import HomeView from 'pages/unauthenticated/home/Home.view'
+import { Loader, SidebarNavView } from './components'
+import HeaderNav from 'components/HeaderNav/HeaderNav.container'
+import Home from 'pages/unauthenticated/home/Home.view'
+import EditProfile from 'pages/authenticated/user/edit/Edit.container'
+import Profile from 'pages/authenticated/user/User.container'
+import { editProfile, summary } from 'routes'
 
-const ProfileContainer = lazy(
-	() => import('pages/authenticated/profile/Profile.container')
-)
-const EditProfileContainer = lazy(
-	() => import('pages/authenticated/profile/edit/Edit.container')
-)
-
-const protectPrivateUrl = (url: string, auth: boolean) => (auth ? url : '/')
+//const protectPrivateUrl = (url: string, auth: boolean) => (auth ? url : '/')
 
 const App = () => {
 	const { isAuthenticated, isLoading, user } = useAuth0()
@@ -22,41 +16,17 @@ const App = () => {
 	return (
 		<div className="text-white">
 			{isLoading ? (
-				<LoaderView />
+				<Loader />
 			) : (
 				<>
-					<HeaderNavView authenticated={isAuthenticated} />
+					<HeaderNav authenticated={isAuthenticated} />
 					<SidebarNavView authenticated={isAuthenticated} user={user} />
 					<main className="lg:ml-24">
 						<div className="py-6 lg:py-0 sm:px-0">
 							<Routes>
-								{routes.map((el, index) => (
-									<Route
-										key={index}
-										path={
-											el.private
-												? protectPrivateUrl(el.url, isAuthenticated)
-												: '/'
-										}
-										element={
-											el.name === HOME ? (
-												<HomeView />
-											) : (
-												<Suspense fallback={<LoaderView />}>
-													<section className="bg-gray_200 h-screen m-0">
-														{el.name === SUMMARY && (
-															<ProfileContainer user={user} />
-														)}
-														{el.name === EDIT_PROFILE && (
-															<EditProfileContainer />
-														)}
-													</section>
-												</Suspense>
-											)
-										}
-									/>
-								))}
-								<Route path="*" element={<Navigate to={'/'} />} />
+								<Route path={`${editProfile}/*`} element={<EditProfile />} />
+								<Route path={summary} element={<Profile user={user} />} />
+								<Route path="*" element={<Home />} />
 							</Routes>
 						</div>
 					</main>
