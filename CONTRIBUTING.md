@@ -9,6 +9,13 @@ We have also a discord channel! Join using this link -> [Discord Channel](https:
 
 ## Pull Request Process
 
+Creating a new branch is necessary in order to contribute. The branch should refer to the issue in our Trello-Board which can be found [here](https://trello.com/invite/b/T93xcMct/aed49c44fd44d7d47d8a66ff64c4b906/oviron-design). Naming the branch after the issue is recommended. A Pull Request should contain the following informations:
+1. Meaningful title (issue name is possible too)
+2. Detailed description of the changes
+3. Screenshots, when the UI was changed
+4. Link to the issue
+
+Also consider the following things when creating a Pull Request:
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a
    build.
 2. Update the README.md with details of changes to the interface, this includes new environment
