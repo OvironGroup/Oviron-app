@@ -18,6 +18,20 @@ import { ReactComponent as Logout } from './logout.svg'
 import { ReactComponent as User } from './user.svg'
 import { ReactComponent as UserOutline } from './user-outline.svg'
 import { ReactComponent as Home } from './home.svg'
+import { ReactComponent as Behance } from './behance.svg'
+import { ReactComponent as CaretDown } from './caret-down.svg'
+import { ReactComponent as Close } from './close.svg'
+import { ReactComponent as Deviantart } from './deviantart.svg'
+import { ReactComponent as Dribbble } from './dribbble.svg'
+import { ReactComponent as Glass } from './glass.svg'
+import { ReactComponent as Instagram } from './instagram.svg'
+import { ReactComponent as Lock } from './lock.svg'
+import { ReactComponent as MapMarker } from './map-marker-alt.svg'
+import { ReactComponent as Pen } from './pen.svg'
+import { ReactComponent as Plus } from './plus.svg'
+import { ReactComponent as Twitch } from './twitch.svg'
+import { ReactComponent as Upload } from './upload.svg'
+import { ReactComponent as Gumroad } from './gumroad.svg'
 
 export {
 	Logo,
@@ -40,4 +54,18 @@ export {
 	Logout,
 	UserOutline,
 	Home,
+	Behance,
+	CaretDown,
+	Close,
+	Deviantart,
+	Dribbble,
+	Glass,
+	Instagram,
+	Lock,
+	MapMarker,
+	Pen,
+	Plus,
+	Twitch,
+	Upload,
+	Gumroad,
 }
