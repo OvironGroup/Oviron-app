@@ -50,7 +50,7 @@ const ProfileSidebar = ({ user, metadata }: Props): ReactElement => {
 				<div className="flex-1">
 					<ul>
 						<li className="text-xl text-gray_900">
-							<strong>{user?.nickname}</strong>
+							<strong>{metadata.nickname || user?.nickname}</strong>
 						</li>
 						<li className="text-base">{title}</li>
 						<li className="text-base flex items-center">
