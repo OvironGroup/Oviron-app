@@ -60,20 +60,34 @@ const ProfileSidebar = ({ user, metadata }: Props): ReactElement => {
 					</ul>
 				</div>
 			</div>
-			<div>
-				<div className="mb-3">
-					<p className="flex text-base">
-						<span>
-							<strong>{followers}</strong> Followers
-						</span>
-						<span>
-							<strong>{following}</strong> Following
-						</span>
-						<span>
-							<strong>{kudos}</strong> Kudos
-						</span>
-					</p>
+			<div
+				className="mb-3"
+				style={{
+					display: 'grid',
+					gridTemplateColumns: 'repeat(3, 1fr)',
+					gridGap: 20,
+				}}
+			>
+				<div>
+					<span>
+						<strong>{followers || 0}</strong>
+						<br /> Followers
+					</span>
 				</div>
+				<div>
+					<span>
+						<strong>{following || 0}</strong>
+						<br /> Following
+					</span>
+				</div>
+				<div>
+					<span>
+						<strong>{kudos || 0}</strong>
+						<br /> Kudos
+					</span>
+				</div>
+			</div>
+			<div>
 				<div className="mb-3">
 					<h5 className="text-xl">Website</h5>
 					<a
