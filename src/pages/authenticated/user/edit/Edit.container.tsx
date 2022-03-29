@@ -7,6 +7,10 @@ import Navigation from './Navigation.view'
 import Profile from './Profile.view'
 import Account from './Account.view'
 import { Route, Routes } from 'react-router-dom'
+import Password from './Password.view'
+import BlockedUser from './BlockedUser'
+import PaymentHistory from './PaymentHistory'
+import PrivacySecurity from './PrivacySecurity.view'
 
 const EditContainer = (): ReactElement => {
 	const { user } = useAuth0()
@@ -24,8 +28,24 @@ const EditContainer = (): ReactElement => {
 						element={<Account token={token} user={user} />}
 					/>
 					<Route
-						path="/edit-profile"
+						path="/profile"
 						element={<Profile token={token} user={user} />}
+					/>
+					<Route
+						path="/password"
+						element={<Password token={token} user={user} />}
+					/>
+					<Route
+						path="/privacy-security"
+						element={<PrivacySecurity token={token} user={user} />}
+					/>
+					<Route
+						path="/blocked-user"
+						element={<BlockedUser token={token} user={user} />}
+					/>
+					<Route
+						path="/payment-history"
+						element={<PaymentHistory token={token} user={user} />}
 					/>
 					<Route path="#edit" element={'something'} />
 				</Routes>

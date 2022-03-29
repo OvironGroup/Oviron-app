@@ -3,7 +3,6 @@ import ProfileServices from '../User.services'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { MetadataType } from '../User.types'
 import { User } from '@auth0/auth0-react'
-import { Button } from 'components'
 
 interface Props {
 	token: string | undefined
@@ -11,14 +10,12 @@ interface Props {
 }
 
 interface IFormInput extends MetadataType {
-	username: string
-	password: string
-	email: string
-	recoverEmail: string
-	dateBirth: string
+	currentPassword: string
+	newPassword: string
+	retypePassword: string
 }
 
-const Account = ({ user, token }: Props): ReactElement => {
+const PrivacySecurity = ({ user, token }: Props): ReactElement => {
 	const { register } = useForm<IFormInput>()
 
 	const onSubmit: SubmitHandler<IFormInput> = async data => {
@@ -32,37 +29,25 @@ const Account = ({ user, token }: Props): ReactElement => {
 	}
 	return (
 		<>
-			<h1 className="text-gray_900 text-2xl mb-10">Account Details</h1>
+			<h1 className="text-gray_900 text-2xl mb-10">
+				Privacy & Security settings
+			</h1>
 			<form className="text-gray_900" onSubmit={() => onSubmit}>
 				<div className="mb-4">
 					<label>Username</label>
-					<input {...register('username', { required: true })} />
+					<input {...register('currentPassword', { required: true })} />
 				</div>
 				<div className="mb-4">
 					<label>Password</label>
-					<input {...register('password', { required: true })} />
+					<input {...register('newPassword', { required: true })} />
 				</div>
 				<div className="mb-4">
 					<label>Email</label>
-					<input {...register('email', { required: true })} />
+					<input {...register('retypePassword', { required: true })} />
 				</div>
-				<div className="mb-4">
-					<label>Recovery email</label>
-					<input {...register('recoverEmail', { required: true })} />
-				</div>
-				<div className="mb-4">
-					<label>Date of Birth</label>
-					<textarea {...register('dateBirth', { required: true })} />
-				</div>
-				<Button
-					onClick={() => null}
-					className="bg-blue_primary text-white rounded-xl cursor-pointer"
-				>
-					Delete your account
-				</Button>
 			</form>
 		</>
 	)
 }
 
-export default Account
+export default PrivacySecurity

@@ -67,102 +67,101 @@ const Profile = ({ user, token }: Props): ReactElement => {
 		await ProfileServices.updateUser(user, token, data_to_update)
 	}
 	return (
-		<form className="text-gray_900" onSubmit={() => onSubmit}>
-			<div className="mb-4">
-				<label>Nickname</label>
-				<input {...register('nickname', { required: true })} />
-			</div>
-			<div className="mb-4">
-				<label>Title</label>
-				<input {...register('title', { required: true })} />
-			</div>
-			<div className="mb-4">
-				<label>Location</label>
-				<input {...register('location', { required: true })} />
-			</div>
-			<div className="mb-4">
-				<label>Websites</label>
-				<input {...register('websites', { required: true })} />
-			</div>
-			<div className="mb-4">
-				<label>About</label>
-				<textarea {...register('about', { required: true })} />
-			</div>
-			<div className="mb-4">
-				<label>Social Profiles</label>
-				<input
-					{...register(`socials.${INSTAGRAM}`, { required: true })}
-					placeholder="Instagram"
-					className="mb-2"
-				/>
-				<input
-					{...register(`socials.${BEHANCE}`, { required: true })}
-					placeholder="Behance"
-					className="my-2"
-				/>
-				<input
-					{...register(`socials.${DEVIANTART}`, { required: true })}
-					placeholder="Deviantart"
-					className="my-2"
-				/>
-				<input
-					{...register(`socials.${GITHUB}`, { required: true })}
-					placeholder="Github"
-					className="my-2"
-				/>
-				<input
-					{...register(`socials.${TWITCH}`, { required: true })}
-					placeholder="Twitch"
-					className="my-2"
-				/>
-				<input
-					{...register(`socials.${TWITTER}`, { required: true })}
-					placeholder="Twitter"
-					className="my-2"
-				/>
-				<input
-					{...register(`socials.${GUMROAD}`, { required: true })}
-					placeholder="Gumroad"
-					className="my-2"
-				/>
-			</div>
-			<div className="mb-4 flex flex-col">
-				<label>Skills & Knowledges</label>
-				<Controller
-					name="skills"
-					control={control}
-					render={({ field }) => (
-						<Chips
-							{...field}
-							value={skills}
-							onChange={e => setSkills(e.value)}
-							separator=","
-							className="Chips"
-						/>
-					)}
-				/>
-			</div>
-			<div className="mb-4 flex flex-col">
-				<label>Interests</label>
-				<Controller
-					name="interests"
-					control={control}
-					render={({ field }) => (
-						<Chips
-							{...field}
-							value={interests}
-							onChange={e => setInterests(e.value)}
-							separator=","
-							className="Chips"
-						/>
-					)}
-				/>
-			</div>
-			<input
-				type="submit"
-				className="bg-blue_primary text-white rounded-xl cursor-pointer"
-			/>
-		</form>
+		<>
+			<h1 className="text-gray_900 text-2xl mb-10">Edit your Profile</h1>
+			<form className="text-gray_900" onSubmit={() => onSubmit}>
+				<div className="mb-4">
+					<label>Nickname</label>
+					<input {...register('nickname', { required: true })} />
+				</div>
+				<div className="mb-4">
+					<label>Title</label>
+					<input {...register('title', { required: true })} />
+				</div>
+				<div className="mb-4">
+					<label>Location</label>
+					<input {...register('location', { required: true })} />
+				</div>
+				<div className="mb-4">
+					<label>Websites</label>
+					<input {...register('websites', { required: true })} />
+				</div>
+				<div className="mb-4">
+					<label>About</label>
+					<textarea {...register('about', { required: true })} />
+				</div>
+				<div className="mb-4">
+					<label>Social Profiles</label>
+					<input
+						{...register(`socials.${INSTAGRAM}`, { required: true })}
+						placeholder="Instagram"
+						className="mb-2"
+					/>
+					<input
+						{...register(`socials.${BEHANCE}`, { required: true })}
+						placeholder="Behance"
+						className="my-2"
+					/>
+					<input
+						{...register(`socials.${DEVIANTART}`, { required: true })}
+						placeholder="Deviantart"
+						className="my-2"
+					/>
+					<input
+						{...register(`socials.${GITHUB}`, { required: true })}
+						placeholder="Github"
+						className="my-2"
+					/>
+					<input
+						{...register(`socials.${TWITCH}`, { required: true })}
+						placeholder="Twitch"
+						className="my-2"
+					/>
+					<input
+						{...register(`socials.${TWITTER}`, { required: true })}
+						placeholder="Twitter"
+						className="my-2"
+					/>
+					<input
+						{...register(`socials.${GUMROAD}`, { required: true })}
+						placeholder="Gumroad"
+						className="my-2"
+					/>
+				</div>
+				<div className="mb-4 flex flex-col">
+					<label>Skills & Knowledges</label>
+					<Controller
+						name="skills"
+						control={control}
+						render={({ field }) => (
+							<Chips
+								{...field}
+								value={skills}
+								onChange={e => setSkills(e.value)}
+								separator=","
+								className="Chips"
+							/>
+						)}
+					/>
+				</div>
+				<div className="mb-4 flex flex-col">
+					<label>Interests</label>
+					<Controller
+						name="interests"
+						control={control}
+						render={({ field }) => (
+							<Chips
+								{...field}
+								value={interests}
+								onChange={e => setInterests(e.value)}
+								separator=","
+								className="Chips"
+							/>
+						)}
+					/>
+				</div>
+			</form>
+		</>
 	)
 }
 
