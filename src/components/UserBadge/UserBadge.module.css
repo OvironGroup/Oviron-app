@@ -1,0 +1,11 @@
+.Badge {
+	background: #1E213A 0% 0% no-repeat padding-box;
+	width: 50px;
+	height: 50px;
+	background: transparent linear-gradient(321deg, #F1D740 0%, #F4883B 18%, #BF03B1 24%, #014EF9 78%, #22D3F8 100%) 0% 0% no-repeat padding-box;
+	@apply flex;
+	@apply items-center;
+	@apply justify-center;
+	@apply rounded-full;
+	@apply cursor-pointer;
+}

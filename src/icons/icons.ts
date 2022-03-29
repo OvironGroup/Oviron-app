@@ -32,6 +32,11 @@ import { ReactComponent as Plus } from './plus.svg'
 import { ReactComponent as Twitch } from './twitch.svg'
 import { ReactComponent as Upload } from './upload.svg'
 import { ReactComponent as Gumroad } from './gumroad.svg'
+import { ReactComponent as CaretUp } from './caret-up.svg'
+import { ReactComponent as HelpCircle } from './help-circle-outline.svg'
+import { ReactComponent as FeatherUser } from './feather-user.svg'
+import { ReactComponent as FeatherLock } from './feather-lock.svg'
+import { ReactComponent as FeatherEdit } from './feather-edit.svg'
 
 export {
 	Logo,
@@ -68,4 +73,9 @@ export {
 	Twitch,
 	Upload,
 	Gumroad,
+	CaretUp,
+	HelpCircle,
+	FeatherEdit,
+	FeatherUser,
+	FeatherLock,
 }

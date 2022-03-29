@@ -1,9 +1,10 @@
 import { ReactElement } from 'react'
 import { User } from '@auth0/auth0-react'
 import { Link } from 'react-router-dom'
-import { Ocademy, Orchives, UserOutline, Home } from '../../icons/icons'
+import { Ocademy, Orchives, Home } from '../../icons/icons'
 import styles from './SidebarNav.module.css'
-import { summary } from 'routes'
+
+import UserBadge from 'components/UserBadge/UserBadge.view'
 
 interface Props {
 	authenticated: boolean
@@ -15,11 +16,7 @@ const SidebarNav = ({ authenticated, user }: Props): ReactElement => (
 		<ul className="p-0 m-0 flex justify-evenly items-center lg:block">
 			{authenticated && (
 				<li>
-					<Link to={summary} title={user?.name}>
-						<div data-testid="logged_icon" className={styles.UserLoggedIcon}>
-							<UserOutline />
-						</div>
-					</Link>
+					<UserBadge user={user} />
 				</li>
 			)}
 			<li>

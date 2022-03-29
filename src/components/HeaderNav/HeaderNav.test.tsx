@@ -1,4 +1,5 @@
 import { screen, render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 import HeaderNavContainer from './HeaderNav.container'
 
@@ -19,9 +20,11 @@ describe('<HeaderNavContainer />', () => {
 			</MemoryRouter>
 		)
 
-		const logoutIcon = screen.getByTestId('logout_icon')
+		const logoutIcon = screen.getByTestId('user-dropdown-icon')
 
-		expect(logoutIcon).toBeInTheDocument()
+		userEvent.click(logoutIcon)
+
+		expect(screen.getByTestId('user-dropdown')).toBeInTheDocument()
 	})
 
 	test('should display login button when not authenticated', () => {

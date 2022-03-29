@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="19.8" height="19.8" viewBox="0 0 19.8 19.8">
-  <g id="Icon_feather-log-out" data-name="Icon feather-log-out" transform="translate(0.9 0.9)">
-    <path id="Path_212" data-name="Path 212" d="M10.5,22.5h-4a2,2,0,0,1-2-2V6.5a2,2,0,0,1,2-2h4" transform="translate(-4.5 -4.5)" fill="none" stroke="#1e213a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
-    <path id="Path_213" data-name="Path 213" d="M24,20.5l5-5-5-5" transform="translate(-11 -6.5)" fill="none" stroke="#1e213a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
-    <path id="Path_214" data-name="Path 214" d="M25.5,18h-12" transform="translate(-7.5 -9)" fill="none" stroke="#1e213a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="24.383" height="22" viewBox="0 0 24.383 22">
+  <g id="Icon_ionic-md-log-out" data-name="Icon ionic-md-log-out" transform="translate(-3.375 -3.375)">
+    <path id="Path_295" data-name="Path 295" d="M13.5,18.109H24.583L22.035,20.72l1.747,1.747,5.608-5.608L23.782,11.25,21.971,13l2.611,2.611H13.5Z" transform="translate(-1.633 -2.483)" fill="#5d617d"/>
+    <g id="Group_551" data-name="Group 551" transform="translate(3.375 3.375)">
+      <path id="Path_296" data-name="Path 296" d="M13.731,23.117a7.944,7.944,0,0,1-5.819-2.56,9.139,9.139,0,0,1,0-12.364A7.893,7.893,0,0,1,19.54,8.182l1.511-1.6A11.2,11.2,0,0,0,19.67,5.353a9.946,9.946,0,0,0-5.938-1.978c-5.709,0-10.356,4.934-10.356,11s4.647,11,10.356,11a9.891,9.891,0,0,0,5.933-1.983,10.459,10.459,0,0,0,1.381-1.227l-1.506-1.6A7.932,7.932,0,0,1,13.731,23.117Z" transform="translate(-3.375 -3.375)" fill="#5d617d"/>
+      <path id="Path_297" data-name="Path 297" d="M31.458,17.958h.084v.084h-.084Z" transform="translate(-10.625 -7)" fill="#5d617d"/>
+    </g>
   </g>
 </svg>

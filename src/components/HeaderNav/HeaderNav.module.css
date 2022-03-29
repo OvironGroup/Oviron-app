@@ -32,3 +32,13 @@ a[class="active"] {
 	@apply rounded-2xl;
 	background: transparent linear-gradient(104deg, #22D3F8 0%, #014EF9 31%, #002988 100%) 0% 0% no-repeat padding-box;
 }
+
+.MenuItem {
+	@apply flex;
+	@apply items-center;
+	@apply py-2;
+	@apply cursor-pointer;
+	@apply px-3;
+	@apply hover:bg-gray_100;
+	@apply rounded-3xl;
+}
