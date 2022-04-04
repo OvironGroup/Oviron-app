@@ -7,12 +7,12 @@ const Welcome = (): ReactElement => (
 		<div className="flex bg-animated">
 			<div className="lg:flex lg:justify-center lg:flex-col lg:w-1/2">
 				<h1 className="text-4xl mb-10 leading-tight xl:text-6xl">
-					EMPOWERING CREATORS <span className="text-gray-medium">&</span> MASSES
+					EMPOWERING INDIE CREATORS <span className="text-gray-medium">&</span> ENTHUSIASTS
 					<span className="text-blue-light">.</span>
 				</h1>
 				<p className="leading-9 xl:text-2xl">
 					OVIRON, the platform that foster content ownership, creativity, and
-					collaboration between creators and masses.
+					collaboration between indie 3D/VR content creators and communities.
 					<br />
 					<br />
 					Discover more about OVIRON
