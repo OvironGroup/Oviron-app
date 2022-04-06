@@ -2,7 +2,7 @@ import { ReactElement, useState } from 'react'
 import { Chips } from 'primereact/chips'
 import ProfileServices from '../User.services'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
-import { ISocialsType, MetadataType } from '../User.types'
+import { ISocials, IMetadata } from '../User.models'
 import { User } from '@auth0/auth0-react'
 
 interface Props {
@@ -10,13 +10,13 @@ interface Props {
 	user: User | undefined
 }
 
-interface IFormInput extends MetadataType {
+interface IFormInput extends IMetadata {
 	about: string
 	interests: string[]
 	location: string
 	nickname: string
 	skills: string[]
-	socials: ISocialsType
+	socials: ISocials
 	title: string
 	websites: string
 	audience: {

@@ -1,0 +1,15 @@
+.Input {
+	@apply block;
+	@apply w-full;
+	@apply h-12;
+	@apply px-3;
+	@apply py-1.5;
+	@apply border;
+	@apply border-solid;
+	@apply border-gray_300;
+	@apply rounded;
+}
+
+.Input:disabled {
+	@apply bg-gray_100;
+}

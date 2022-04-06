@@ -20,11 +20,25 @@
 	@apply border-blue_primary
 }
 
+.BtnGray {
+	@apply bg-gray_200;
+	@apply text-gray_900;
+	@apply rounded-lg;
+}
+
 .BtnDangerOutline {
 	@apply border-2;
-	@apply border-y-ochre_dark
+	@apply border-y-ochre_dark;
+	@apply text-ochre_dark;
+	@apply rounded-md;
+}
+
+.BtnDangerOutline:hover {
+	@apply bg-ochre_dark;
+	@apply text-white;
 }
 
 .BtnDanger {
-	@apply bg-ochre_dark
+	@apply bg-ochre_dark;
+	@apply text-white;
 }

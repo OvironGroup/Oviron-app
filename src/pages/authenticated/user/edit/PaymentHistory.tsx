@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 import ProfileServices from '../User.services'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { MetadataType } from '../User.types'
+import { IMetadata } from '../User.models'
 import { User } from '@auth0/auth0-react'
 
 interface Props {
@@ -9,7 +9,7 @@ interface Props {
 	user: User | undefined
 }
 
-interface IFormInput extends MetadataType {
+interface IFormInput extends IMetadata {
 	currentPassword: string
 	newPassword: string
 	retypePassword: string

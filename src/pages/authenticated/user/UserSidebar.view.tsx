@@ -1,6 +1,5 @@
-import { User } from '@auth0/auth0-react'
 import { ReactElement } from 'react'
-import { MetadataType } from './User.types'
+import { IUserData } from './User.models'
 import styles from './User.module.css'
 import {
 	Behance,
@@ -10,47 +9,53 @@ import {
 	Gumroad,
 	Instagram,
 	MapMarker,
+	Pen,
 	Twitch,
 	Twitter,
 } from 'icons/icons'
+import { Link } from 'react-router-dom'
+import { editProfile } from 'routes'
 
 interface Props {
-	user: User | undefined
-	metadata: MetadataType
+	userData: IUserData
 }
 
-const ProfileSidebar = ({ user, metadata }: Props): ReactElement => {
+const UserSidebar = ({ userData }: Props): ReactElement => {
 	const {
-		title,
-		city,
-		nation,
-		website,
-		about,
-		interests,
-		skills,
-		audience: { followers, following, kudos },
-		socials: {
-			github,
-			behance,
-			instagram,
-			twitch,
-			deviantart,
-			gumroad,
-			twitter,
-			dribbble,
+		picture,
+		user_metadata: {
+			about,
+			audience: { followers, following, kudos },
+			city,
+			interests,
+			nation,
+			nickname,
+			skills,
+			social: {
+				behance,
+				deviantart,
+				dribbble,
+				github,
+				gumroad,
+				instagram,
+				twitch,
+				twitter,
+			},
+			title,
+			website,
 		},
-	} = metadata
+	}: IUserData = userData
 
 	return (
 		<div className={styles.Sidebar}>
 			<div className="flex">
 				<div className="rounded-full relative bottom-16 right-5 border-8 border-white">
-					<img src={user?.picture} className="rounded-full" />
+					<img src={picture} className="rounded-full" />
 				</div>
 				<div className="flex-1">
 					<ul>
 						<li className="text-xl text-gray_900">
-							<strong>{metadata.nickname || user?.nickname}</strong>
+							<strong>{nickname}</strong>
 						</li>
 						<li className="text-base">{title}</li>
 						<li className="text-base flex items-center">
@@ -89,7 +94,12 @@ const ProfileSidebar = ({ user, metadata }: Props): ReactElement => {
 			</div>
 			<div>
 				<div className="mb-3">
-					<h5 className="text-xl">Website</h5>
+					<h5 className="text-base flex items-center">
+						<span>Website</span>{' '}
+						<Link to={`/${editProfile}/profile`} className="ml-2">
+							<Pen />
+						</Link>
+					</h5>
 					<a
 						href={website}
 						className="underline"
@@ -100,59 +110,85 @@ const ProfileSidebar = ({ user, metadata }: Props): ReactElement => {
 					</a>
 				</div>
 				<div className="mb-3">
-					<h5 className="text-xl">About</h5>
+					<h5 className="text-base flex items-center">
+						<span>About</span>
+						<Link to={`/${editProfile}/profile`} className="ml-2">
+							<Pen />
+						</Link>
+					</h5>
 					<p className="text-base">{about}</p>
 				</div>
-				<div className="mb-3">
-					<h5 className="text-xl">Connect</h5>
-					<ul className="flex my-2">
-						{github && (
-							<li className="cursor-pointer">
-								<Github />
-							</li>
-						)}
-						{behance && (
-							<li className="cursor-pointer">
-								<Behance />
-							</li>
-						)}
-						{instagram && (
-							<li className="cursor-pointer">
-								<Instagram />
-							</li>
-						)}
-						{twitch && (
-							<li className="cursor-pointer">
-								<Twitch />
-							</li>
-						)}
-						{deviantart && (
-							<li className="cursor-pointer">
-								<Deviantart />
-							</li>
-						)}
-						{twitch && (
-							<li className="cursor-pointer">
-								<Twitch />
-							</li>
-						)}
-						{twitter && (
-							<li className="cursor-pointer">
-								<Twitter />
-							</li>
-						)}
-						{gumroad && (
-							<li className="cursor-pointer">
-								<Gumroad />
-							</li>
-						)}
-						{dribbble && (
-							<li className="cursor-pointer">
-								<Dribbble />
-							</li>
-						)}
-					</ul>
-				</div>
+				{Object.keys(userData.user_metadata.social).length > 0 && (
+					<div className="mb-3">
+						<h5 className="text-xl">Connect</h5>
+						<ul className="flex my-2">
+							{github && (
+								<li className={styles.SocialBadge}>
+									<a href={github} target="_blank" rel="noreferrer">
+										<Github width={18} />
+									</a>
+								</li>
+							)}
+							{behance && (
+								<li className={styles.SocialBadge}>
+									<a href={behance} target="_blank" rel="noreferrer">
+										<Behance width={18} />
+									</a>
+								</li>
+							)}
+							{instagram && (
+								<li className={styles.SocialBadge}>
+									<a href={instagram} target="_blank" rel="noreferrer">
+										<Instagram width={18} />
+									</a>
+								</li>
+							)}
+							{twitch && (
+								<li className={styles.SocialBadge}>
+									<a href={twitch} target="_blank" rel="noreferrer">
+										<Twitch width={18} />
+									</a>
+								</li>
+							)}
+							{deviantart && (
+								<li className={styles.SocialBadge}>
+									<a href={deviantart} target="_blank" rel="noreferrer">
+										<Deviantart width={18} />
+									</a>
+								</li>
+							)}
+							{twitch && (
+								<li className={styles.SocialBadge}>
+									<a href={twitch} target="_blank" rel="noreferrer">
+										<Twitch width={18} />
+									</a>
+								</li>
+							)}
+							{twitter && (
+								<li className={styles.SocialBadge}>
+									<a href={twitter} target="_blank" rel="noreferrer">
+										<Twitter width={18} />
+									</a>
+								</li>
+							)}
+							{gumroad && (
+								<li className={styles.SocialBadge}>
+									<a href={gumroad} target="_blank" rel="noreferrer">
+										<Gumroad width={18} />
+									</a>
+								</li>
+							)}
+							{dribbble && (
+								<li className={styles.SocialBadge}>
+									<a href={dribbble} target="_blank" rel="noreferrer">
+										<Dribbble width={18} />
+									</a>
+								</li>
+							)}
+						</ul>
+					</div>
+				)}
+
 				<div className="mb-3">
 					<h5 className="text-xl">Skills</h5>
 					<ul className="flex">
@@ -178,4 +214,4 @@ const ProfileSidebar = ({ user, metadata }: Props): ReactElement => {
 	)
 }
 
-export default ProfileSidebar
+export default UserSidebar

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { FC, ReactElement, ReactNode } from 'react'
 import cn from 'classnames'
 import styles from './Button.module.css'
@@ -6,9 +7,15 @@ const PRIMARY = 'primary'
 const OUTLINE = 'outline'
 const DANGER_OUTLINE = 'danger_outline'
 const DANGER = 'danger'
+const GRAY = 'gray'
 
 interface Props {
-	type?: typeof PRIMARY | typeof OUTLINE | typeof DANGER_OUTLINE | typeof DANGER
+	type?:
+	| typeof PRIMARY
+	| typeof OUTLINE
+	| typeof DANGER_OUTLINE
+	| typeof DANGER
+	| typeof GRAY
 	onClick: () => void
 	children: ReactNode
 	title?: string
@@ -29,6 +36,7 @@ const Button: FC<Props> = ({
 		BtnOutline: type === OUTLINE,
 		BtnDangerOutline: type === DANGER_OUTLINE,
 		BtnDanger: type === DANGER,
+		BtnGray: type === GRAY,
 	})
 
 	return (

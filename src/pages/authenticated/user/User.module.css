@@ -15,3 +15,10 @@
 	@apply lg:relative;
 	@apply lg:bottom-20;
 }
+
+.SocialBadge {
+	@apply cursor-pointer;
+	@apply bg-gray_200;
+	@apply p-1;
+	@apply rounded-lg;
+}

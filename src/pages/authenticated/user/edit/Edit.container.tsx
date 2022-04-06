@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import useGetToken from 'utils/useGetToken'
+import useGetToken from 'utils/useTokenService'
 import 'primereact/resources/themes/lara-light-indigo/theme.css'
 import 'primereact/resources/primereact.min.css'
 import { useAuth0 } from '@auth0/auth0-react'
@@ -14,7 +14,7 @@ import PrivacySecurity from './PrivacySecurity.view'
 
 const EditContainer = (): ReactElement => {
 	const { user } = useAuth0()
-	const token = useGetToken()
+	useGetToken()
 
 	return (
 		<div className="flex bg-white w-3/4 p-10 relative top-10 mx-auto rounded-2xl h-fit">
@@ -25,27 +25,51 @@ const EditContainer = (): ReactElement => {
 				<Routes>
 					<Route
 						path="/account"
-						element={<Account token={token} user={user} />}
+						element={
+							<Account token={String(localStorage.getItem('tk'))} user={user} />
+						}
 					/>
 					<Route
 						path="/profile"
-						element={<Profile token={token} user={user} />}
+						element={
+							<Profile token={String(localStorage.getItem('tk'))} user={user} />
+						}
 					/>
 					<Route
 						path="/password"
-						element={<Password token={token} user={user} />}
+						element={
+							<Password
+								token={String(localStorage.getItem('tk'))}
+								user={user}
+							/>
+						}
 					/>
 					<Route
 						path="/privacy-security"
-						element={<PrivacySecurity token={token} user={user} />}
+						element={
+							<PrivacySecurity
+								token={String(localStorage.getItem('tk'))}
+								user={user}
+							/>
+						}
 					/>
 					<Route
 						path="/blocked-user"
-						element={<BlockedUser token={token} user={user} />}
+						element={
+							<BlockedUser
+								token={String(localStorage.getItem('tk'))}
+								user={user}
+							/>
+						}
 					/>
 					<Route
 						path="/payment-history"
-						element={<PaymentHistory token={token} user={user} />}
+						element={
+							<PaymentHistory
+								token={String(localStorage.getItem('tk'))}
+								user={user}
+							/>
+						}
 					/>
 					<Route path="#edit" element={'something'} />
 				</Routes>

@@ -1,18 +1,20 @@
 import { ReactElement } from 'react'
 import ProfileServices from '../User.services'
+import { useNavigate } from 'react-router-dom'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { MetadataType } from '../User.types'
+import { IMetadata } from '../User.models'
 import { User } from '@auth0/auth0-react'
 import { Button } from 'components'
+import Input from 'components/Input/Input.view'
+import { editProfile } from 'routes'
 
 interface Props {
 	token: string | undefined
 	user: User | undefined
 }
 
-interface IFormInput extends MetadataType {
+interface IFormInput extends IMetadata {
 	username: string
-	password: string
 	email: string
 	recoverEmail: string
 	dateBirth: string
@@ -20,6 +22,8 @@ interface IFormInput extends MetadataType {
 
 const Account = ({ user, token }: Props): ReactElement => {
 	const { register } = useForm<IFormInput>()
+
+	const navigate = useNavigate()
 
 	const onSubmit: SubmitHandler<IFormInput> = async data => {
 		const data_to_update = {
@@ -40,7 +44,12 @@ const Account = ({ user, token }: Props): ReactElement => {
 				</div>
 				<div className="mb-4">
 					<label>Password</label>
-					<input {...register('password', { required: true })} />
+					<Input
+						value="something"
+						disabled
+						withEdit
+						editOnClick={() => navigate(`/${editProfile}/password`)}
+					/>
 				</div>
 				<div className="mb-4">
 					<label>Email</label>
@@ -54,10 +63,7 @@ const Account = ({ user, token }: Props): ReactElement => {
 					<label>Date of Birth</label>
 					<textarea {...register('dateBirth', { required: true })} />
 				</div>
-				<Button
-					onClick={() => null}
-					className="bg-blue_primary text-white rounded-xl cursor-pointer"
-				>
+				<Button onClick={() => null} type="danger_outline">
 					Delete your account
 				</Button>
 			</form>
