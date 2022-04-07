@@ -1,15 +1,15 @@
-# Oviron frontend application
+# OVIRON frontend application
 
-OVIRON is the community-driven platform that fosters creativity, ownership, and collaboration between Digital & VR content creators and enthusiasts.
+OVIRON is the open-source community-driven platform that fosters independace, ownership, creativity, and collaboration between indie Digital & VR content creators and enthusiasts.
 
-### Prerequisites
+## Prerequisites
 
 In order to setup the project in your local environment make sure you have:
 
 - OS: MacOS or Linux
 - node version 16 or above
 
-### Installing
+## Installing
 
 Install the required dependencies running
 
@@ -50,6 +50,9 @@ This command shouldn't be executed in local environment. It is used by AWS after
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Contact us
+🤗 Get in touch with us and interact with the community on the [Community Discord](https://discord.gg/Aeaw8BPMDx)!
 
 ## License
 
