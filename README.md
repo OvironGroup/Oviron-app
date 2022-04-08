@@ -1,4 +1,4 @@
-# OVIRON frontend application
+![OVIRON, the platform for the indie Digital & VR content creation community](https://raw.githubusercontent.com/OvironGroup/Oviron-app/main/docs/OVIRON%20GitHub%20banner%20%E2%80%93%202.jpg)
 
 OVIRON is the open-source community-driven platform that fosters independace, ownership, creativity, and collaboration between indie Digital & VR content creators and enthusiasts.
 
