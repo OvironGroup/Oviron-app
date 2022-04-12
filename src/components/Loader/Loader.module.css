@@ -1,14 +1,38 @@
-.Loader {
-  -webkit-animation: spinner 1.5s linear infinite;
+
+.Container {
+	@apply flex;
+	@apply items-center;
+	@apply justify-center;
+	@apply space-x-2;
+	@apply h-screen;
+}
+
+.Container.Small {
+	@apply h-5;
+	@apply min-w-fit;
+}
+
+.Loader,
+.Loader.Small {
+	-webkit-animation: spinner 1.5s linear infinite;
   animation: spinner 1.5s linear infinite;
+	border-top-color: #3498db;
+}
+
+.Loader {
 	@apply ease-linear;
 	@apply rounded-full;
-	@apply border-8;
 	@apply border-t-8;
 	@apply border-gray_200;
-	border-top-color: #3498db;
 	@apply h-20;
 	@apply w-20;
+	@apply border-8;
+}
+
+.Loader.Small {
+	@apply w-5;
+	@apply h-5;
+	@apply border-4;
 }
 
 @-webkit-keyframes spinner {

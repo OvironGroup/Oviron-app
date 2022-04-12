@@ -1,9 +1,13 @@
 import { ReactElement } from 'react'
 import styles from './Loader.module.css'
 
-const LoaderView = (): ReactElement => (
-	<div className="flex items-center h-screen justify-center space-x-2">
-		<div className={styles.Loader}></div>
+interface Props {
+	small?: boolean
+}
+
+const LoaderView = ({ small }: Props): ReactElement => (
+	<div className={`${styles.Container} ${small && styles.Small}`}>
+		<div className={`${styles.Loader} ${small && styles.Small}`}></div>
 	</div>
 )
 

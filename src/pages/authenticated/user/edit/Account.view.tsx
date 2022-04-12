@@ -6,7 +6,7 @@ import { IMetadata } from '../User.models'
 import { User } from '@auth0/auth0-react'
 import { Button } from 'components'
 import Input from 'components/Input/Input.view'
-import { editProfile } from 'routes'
+import { editUser } from 'routes'
 
 interface Props {
 	token: string | undefined
@@ -48,7 +48,7 @@ const Account = ({ user, token }: Props): ReactElement => {
 						value="something"
 						disabled
 						withEdit
-						editOnClick={() => navigate(`/${editProfile}/password`)}
+						editOnClick={() => navigate(`/${editUser}/password`)}
 					/>
 				</div>
 				<div className="mb-4">

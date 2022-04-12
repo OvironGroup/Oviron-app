@@ -2,6 +2,7 @@
 import { FC, ReactElement, ReactNode } from 'react'
 import cn from 'classnames'
 import styles from './Button.module.css'
+import { Loader } from 'components'
 
 const PRIMARY = 'primary'
 const OUTLINE = 'outline'
@@ -21,6 +22,7 @@ interface Props {
 	title?: string
 	className?: string
 	dataTestId?: string
+	loading?: boolean
 }
 
 const Button: FC<Props> = ({
@@ -30,6 +32,7 @@ const Button: FC<Props> = ({
 	title,
 	className,
 	dataTestId,
+	loading,
 }: Props): ReactElement => {
 	const BtnBackground = cn({
 		BtnPrimary: type === PRIMARY,
@@ -47,7 +50,9 @@ const Button: FC<Props> = ({
 			onClick={onClick}
 			className={`${className} ${styles.Btn} ${styles[BtnBackground]}`}
 		>
-			{children}
+			{
+				loading ? <Loader small /> : children
+			}
 		</button>
 	)
 }

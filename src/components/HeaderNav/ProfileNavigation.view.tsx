@@ -1,14 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { ReactElement } from 'react'
 import styles from './HeaderNav.module.css'
-import {
-	editProfile,
-	assets,
-	classroom,
-	kudos,
-	moodboard,
-	summary,
-} from 'routes'
+import { editUser, assets, classroom, kudos, moodboard, summary } from 'routes'
 
 const ProfileNavigation = (): ReactElement => (
 	<div className="ml-14 flex">
@@ -20,7 +13,7 @@ const ProfileNavigation = (): ReactElement => (
 			<NavLink to={classroom}>Classroom</NavLink>
 		</ul>
 		<NavLink
-			to={`${editProfile}/account`}
+			to={`${editUser}/account`}
 			className="bg-blue_primary rounded-md p-3"
 		>
 			Edit Profile

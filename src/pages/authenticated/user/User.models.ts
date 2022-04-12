@@ -1,31 +1,30 @@
 import { SET_EMAIL } from './User.types'
 
 export type ISocials = {
-	instagram?: string | null
-	behance?: string | null
-	twitter?: string | null
-	twitch?: string | null
-	github?: string | null
-	deviantart?: string | null
-	gumroad?: string | null
-	dribbble?: string | null
+	instagram: string
+	behance: string
+	twitter: string
+	twitch: string
+	github: string
+	deviantart: string
+	gumroad: string
+	dribbble: string
 }
 
 export interface IMetadata {
 	about: string
 	interests: string[]
 	nickname: string
-	city: string
-	audience: {
-		following: string
-		followers: string
-		kudos: string
-	}
-	nation: string
+	location: string
 	skills: string[]
 	social: ISocials
 	title: string
 	website: string
+}
+
+export interface IUserSaveData {
+	nickname: string
+	user_metadata: IMetadata
 }
 
 export interface IIdentities {
@@ -51,6 +50,47 @@ export interface IUserData {
 	updated_at: string
 	user_id: string
 	user_metadata: IMetadata
+}
+
+export const userDataInitialValues: IUserData = {
+	created_at: '',
+	email: '',
+	email_verified: true,
+	identities: {
+		'0': {
+			connection: '',
+			isSocial: true,
+			provider: '',
+			user_id: '',
+		},
+	},
+	last_ip: '',
+	last_login: '',
+	logins_count: 1,
+	name: '',
+	nickname: '',
+	picture: '',
+	updated_at: '',
+	user_id: '',
+	user_metadata: {
+		about: '',
+		interests: [''],
+		location: '',
+		nickname: '',
+		skills: [''],
+		social: {
+			behance: '',
+			github: '',
+			instagram: '',
+			twitch: '',
+			twitter: '',
+			deviantart: '',
+			gumroad: '',
+			dribbble: '',
+		},
+		title: '',
+		website: '',
+	},
 }
 
 interface setEmailModel {

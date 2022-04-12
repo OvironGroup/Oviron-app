@@ -22,14 +22,8 @@ const initialState: IUserData = {
 	user_id: '',
 	user_metadata: {
 		about: '',
-		audience: {
-			followers: '',
-			following: '',
-			kudos: '',
-		},
-		city: '',
+		location: '',
 		interests: [''],
-		nation: '',
 		nickname: '',
 		skills: [''],
 		social: {

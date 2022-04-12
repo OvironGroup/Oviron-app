@@ -14,7 +14,7 @@ import {
 	Twitter,
 } from 'icons/icons'
 import { Link } from 'react-router-dom'
-import { editProfile } from 'routes'
+import { editUser } from 'routes'
 
 interface Props {
 	userData: IUserData
@@ -25,10 +25,8 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 		picture,
 		user_metadata: {
 			about,
-			audience: { followers, following, kudos },
-			city,
 			interests,
-			nation,
+			location,
 			nickname,
 			skills,
 			social: {
@@ -60,7 +58,7 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 						<li className="text-base">{title}</li>
 						<li className="text-base flex items-center">
 							<MapMarker />
-							<span className="ml-1">{`${city}, ${nation}`}</span>
+							<span className="ml-1">{location}</span>
 						</li>
 					</ul>
 				</div>
@@ -75,19 +73,19 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 			>
 				<div>
 					<span>
-						<strong>{followers || 0}</strong>
+						<strong>{0}</strong>
 						<br /> Followers
 					</span>
 				</div>
 				<div>
 					<span>
-						<strong>{following || 0}</strong>
+						<strong>{0}</strong>
 						<br /> Following
 					</span>
 				</div>
 				<div>
 					<span>
-						<strong>{kudos || 0}</strong>
+						<strong>{0}</strong>
 						<br /> Kudos
 					</span>
 				</div>
@@ -96,7 +94,7 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 				<div className="mb-3">
 					<h5 className="text-base flex items-center">
 						<span>Website</span>{' '}
-						<Link to={`/${editProfile}/profile`} className="ml-2">
+						<Link to={`/${editUser}/profile`} className="ml-2">
 							<Pen />
 						</Link>
 					</h5>
@@ -112,7 +110,7 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 				<div className="mb-3">
 					<h5 className="text-base flex items-center">
 						<span>About</span>
-						<Link to={`/${editProfile}/profile`} className="ml-2">
+						<Link to={`/${editUser}/profile`} className="ml-2">
 							<Pen />
 						</Link>
 					</h5>
