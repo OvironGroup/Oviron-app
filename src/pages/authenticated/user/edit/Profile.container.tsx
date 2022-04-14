@@ -1,13 +1,12 @@
 import { ChangeEvent, ReactElement, useEffect, useState } from 'react'
 import { Chips } from 'primereact/chips'
-import UserServices from '../User.services'
+import useUserService from '../useUserService'
 import { Controller, useForm } from 'react-hook-form'
 import { IMetadata, IUserData, IUserSaveData } from '../User.models'
 import Input from 'components/Input/Input.view'
 import { useAuth0 } from '@auth0/auth0-react'
 
 interface Props {
-	token: string | undefined
 	userData: IUserData
 	updating: boolean
 	updated: (value: boolean) => void
@@ -27,12 +26,7 @@ const INSTAGRAM = 'instagram'
 const TWITCH = 'twitch'
 const TWITTER = 'twitter'
 
-const Profile = ({
-	userData,
-	token,
-	updating,
-	updated,
-}: Props): ReactElement => {
+const Profile = ({ userData, updating, updated }: Props): ReactElement => {
 	const { user } = useAuth0()
 	const {
 		user_metadata: {
@@ -55,7 +49,9 @@ const Profile = ({
 			location,
 		},
 	} = userData
+
 	const { register, control } = useForm<IUserSaveData>()
+	const userService = useUserService()
 	const [skillsData, setSkillsData] = useState<string[]>([''])
 	const [interestsData, setInterestsData] = useState<string[]>([''])
 	const [formValue, setFormValue] = useState<{ [x: string]: string }>({
@@ -222,7 +218,7 @@ const Profile = ({
 				},
 			}
 
-			UserServices.updateUser(user, token, data_to_update).finally(() => {
+			userService.updateUser(user, data_to_update).finally(() => {
 				updated(true)
 			})
 		}
@@ -385,16 +381,18 @@ const Profile = ({
 					<Controller
 						name="user_metadata.interests"
 						control={control}
-						render={({ field }) => (
-							<Chips
-								{...field}
-								value={interestsData}
-								onChange={e => setInterestsData(e.value)}
-								separator=","
-								className="Chips"
-								disabled={updating}
-							/>
-						)}
+						render={({ field }) =>
+							field && (
+								<Chips
+									{...field}
+									value={interestsData}
+									onChange={e => setInterestsData(e.value)}
+									separator=","
+									className="Chips"
+									disabled={updating}
+								/>
+							)
+						}
 					/>
 				</div>
 			</form>

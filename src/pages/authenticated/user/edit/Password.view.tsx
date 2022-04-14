@@ -1,11 +1,10 @@
 import { ReactElement } from 'react'
-import ProfileServices from '../User.services'
+import useUserService from '../useUserService'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { IMetadata } from '../User.models'
 import { User } from '@auth0/auth0-react'
 
 interface Props {
-	token: string | undefined
 	user: User | undefined
 }
 
@@ -15,8 +14,9 @@ interface IFormInput extends IMetadata {
 	retypePassword: string
 }
 
-const Password = ({ user, token }: Props): ReactElement => {
+const Password = ({ user }: Props): ReactElement => {
 	const { register } = useForm<IFormInput>()
+	const userService = useUserService()
 
 	const onSubmit: SubmitHandler<IFormInput> = async data => {
 		const data_to_update = {
@@ -25,7 +25,7 @@ const Password = ({ user, token }: Props): ReactElement => {
 			},
 		}
 
-		await ProfileServices.updateUser(user, token, data_to_update)
+		await userService.updateUser(user, data_to_update)
 	}
 	return (
 		<>

@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
-import useSetToken from 'utils/useTokenService'
-import ProfileServices from './pages/authenticated/user/User.services'
+import useUserService from 'pages/authenticated/user/useUserService'
 import './App.module.css'
 import { Loader, SidebarNavView } from './components'
 import HeaderNav from 'components/HeaderNav/HeaderNav.container'
@@ -14,17 +13,14 @@ import { userDataInitialValues } from 'pages/authenticated/user/User.models'
 
 const App = () => {
 	const { isAuthenticated, isLoading, user } = useAuth0()
-	const serviceToken = useSetToken()
-	serviceToken.setToken()
+	const userService = useUserService()
+
 	const [userData, setUserData] = useState(userDataInitialValues)
 	const [isFetching, setIsFetching] = useState(true)
 
 	useEffect(() => {
 		const getData = async () => {
-			const result = await ProfileServices.getUser(
-				user,
-				serviceToken.getToken()
-			)
+			const result = await userService.getUser(user)
 			setUserData(result)
 			setIsFetching(false)
 		}
@@ -47,9 +43,7 @@ const App = () => {
 							<Routes>
 								<Route
 									path={`${editUser}/*`}
-									element={
-										<EditUser isFetching={isFetching} userData={userData} />
-									}
+									element={<EditUser userData={userData} />}
 								/>
 								<Route
 									path={summary}

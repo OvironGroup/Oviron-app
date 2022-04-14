@@ -1,6 +1,7 @@
 import { ReactComponent as Logo } from './logo.svg'
 import { ReactComponent as Discord } from './discord.svg'
 import { ReactComponent as Twitter } from './twitter.svg'
+import { ReactComponent as TwitterDark } from './twitter-dark.svg'
 import { ReactComponent as Github } from './github.svg'
 import { ReactComponent as Ocademy } from './ocademy.svg'
 import { ReactComponent as Orchives } from './orchives.svg'
@@ -47,6 +48,7 @@ export {
 	Orchives,
 	Github,
 	Twitter,
+	TwitterDark,
 	Discord,
 	OcademyWhite,
 	OrchivesWhite,

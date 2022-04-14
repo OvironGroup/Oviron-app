@@ -15,7 +15,12 @@ import { Button } from 'components'
 import styles from './HeaderNav.module.css'
 import ProfileNavigation from './ProfileNavigation.view'
 import UserBadge from 'components/UserBadge/UserBadge.view'
-import { summary } from 'routes'
+import {
+	fullAccountPath,
+	fullPrivacySecurityPath,
+	fullProfilePath,
+	summary,
+} from 'routes'
 import { Link } from 'react-router-dom'
 
 interface Props {
@@ -62,16 +67,25 @@ const HeaderNavContainer = ({ authenticated }: Props): ReactElement => {
 									</div>
 								</div>
 								<ul className="p-5">
-									<li className={styles.MenuItem}>
-										<FeatherUser />{' '}
-										<span className="ml-3">Account settings</span>
+									<li>
+										<Link to={fullAccountPath} className={styles.MenuItem}>
+											<FeatherUser />{' '}
+											<span className="ml-3">Account settings</span>
+										</Link>
 									</li>
-									<li className={styles.MenuItem}>
-										<FeatherEdit /> <span className="ml-3">Edit Profile</span>
+									<li>
+										<Link to={fullProfilePath} className={styles.MenuItem}>
+											<FeatherEdit /> <span className="ml-3">Edit Profile</span>
+										</Link>
 									</li>
-									<li className={styles.MenuItem}>
-										<FeatherLock />{' '}
-										<span className="ml-3">Privacy & Security</span>
+									<li>
+										<Link
+											to={fullPrivacySecurityPath}
+											className={styles.MenuItem}
+										>
+											<FeatherLock />{' '}
+											<span className="ml-3">Privacy & Security</span>
+										</Link>
 									</li>
 								</ul>
 								<ul className="border-y-2 p-5 border-gray_100">

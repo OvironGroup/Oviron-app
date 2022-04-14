@@ -11,10 +11,10 @@ import {
 	MapMarker,
 	Pen,
 	Twitch,
-	Twitter,
+	TwitterDark,
 } from 'icons/icons'
 import { Link } from 'react-router-dom'
-import { editUser } from 'routes'
+import { fullProfilePath } from 'routes'
 
 interface Props {
 	userData: IUserData
@@ -94,7 +94,7 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 				<div className="mb-3">
 					<h5 className="text-base flex items-center">
 						<span>Website</span>{' '}
-						<Link to={`/${editUser}/profile`} className="ml-2">
+						<Link to={fullProfilePath} className="ml-2">
 							<Pen />
 						</Link>
 					</h5>
@@ -110,7 +110,7 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 				<div className="mb-3">
 					<h5 className="text-base flex items-center">
 						<span>About</span>
-						<Link to={`/${editUser}/profile`} className="ml-2">
+						<Link to={fullProfilePath} className="ml-2">
 							<Pen />
 						</Link>
 					</h5>
@@ -141,13 +141,6 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 									</a>
 								</li>
 							)}
-							{twitch && (
-								<li className={styles.SocialBadge}>
-									<a href={twitch} target="_blank" rel="noreferrer">
-										<Twitch width={18} />
-									</a>
-								</li>
-							)}
 							{deviantart && (
 								<li className={styles.SocialBadge}>
 									<a href={deviantart} target="_blank" rel="noreferrer">
@@ -165,7 +158,7 @@ const UserSidebar = ({ userData }: Props): ReactElement => {
 							{twitter && (
 								<li className={styles.SocialBadge}>
 									<a href={twitter} target="_blank" rel="noreferrer">
-										<Twitter width={18} />
+										<TwitterDark width={18} />
 									</a>
 								</li>
 							)}

@@ -3,7 +3,15 @@ import 'primereact/resources/themes/lara-light-indigo/theme.css'
 import 'primereact/resources/primereact.min.css'
 import Navigation from './Navigation.view'
 import { useResolvedPath, useLocation } from 'react-router-dom'
-import { fullProfilePath } from 'routes'
+import {
+	account,
+	blockedUser,
+	fullProfilePath,
+	password,
+	paymentHistory,
+	privacySecurity,
+	profile,
+} from 'routes'
 import { Button } from 'components'
 import Profile from './Profile.container'
 import Account from './Account.view'
@@ -13,14 +21,12 @@ import BlockedUser from './BlockedUser'
 import PaymentHistory from './PaymentHistory'
 import PrivacySecurity from './PrivacySecurity.view'
 import { IUserData } from '../User.models'
-import { Loader } from 'components'
 
 interface Props {
-	isFetching: boolean
 	userData: IUserData
 }
 
-const EditUser = ({ isFetching, userData }: Props): ReactElement => {
+const EditUser = ({ userData }: Props): ReactElement => {
 	const location = useLocation()
 	const url = useResolvedPath({ pathname: location.pathname })
 	const [updateProfileData, setUpdateProfileData] = useState(false)
@@ -46,67 +52,30 @@ const EditUser = ({ isFetching, userData }: Props): ReactElement => {
 			</div>
 			<div className="w-2/3">
 				<Routes>
+					<Route path={`/${account}`} element={<Account user={userData} />} />
 					<Route
-						path="/account"
-						element={
-							isFetching ? (
-								<Loader />
-							) : (
-								<Account
-									token={String(localStorage.getItem('tk'))}
-									user={userData}
-								/>
-							)
-						}
-					/>
-					<Route
-						path="/profile"
+						path={`/${profile}`}
 						element={
 							<Profile
-								token={String(localStorage.getItem('tk'))}
 								userData={userData}
 								updating={updateProfileData}
 								updated={(value: boolean) => setUpdateProfileData(!value)}
 							/>
 						}
 					/>
+					<Route path={`/${password}`} element={<Password user={userData} />} />
 					<Route
-						path="/password"
-						element={
-							<Password
-								token={String(localStorage.getItem('tk'))}
-								user={userData}
-							/>
-						}
+						path={`/${privacySecurity}`}
+						element={<PrivacySecurity user={userData} />}
 					/>
 					<Route
-						path="/privacy-security"
-						element={
-							<PrivacySecurity
-								token={String(localStorage.getItem('tk'))}
-								user={userData}
-							/>
-						}
+						path={`/${blockedUser}`}
+						element={<BlockedUser user={userData} />}
 					/>
 					<Route
-						path="/blocked-user"
-						element={
-							<BlockedUser
-								token={String(localStorage.getItem('tk'))}
-								user={userData}
-							/>
-						}
+						path={`/${paymentHistory}`}
+						element={<PaymentHistory user={userData} />}
 					/>
-					<Route
-						path="/payment-history"
-						element={
-							<PaymentHistory
-								token={String(localStorage.getItem('tk'))}
-								user={userData}
-							/>
-						}
-					/>
-					<Route path="#edit" element={'something'} />
 				</Routes>
 			</div>
 		</div>
