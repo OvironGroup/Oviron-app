@@ -16,6 +16,9 @@ We vision a **growth of unity and collaboration between indie creators and enthu
 
 In addition, we **envision the born of the open virtual space**, to lessen the distance gap, boost creativity, and see the birth of new digital & VR content creators.
 
+## Lite Paper
+Discover more about the project, the web apps, and methdology in our [Lite Paper](https://docs.oviron.io/oviron/oviron/oviron-project-brief)
+
 ## Contact us
 Get in touch with us and interact with the community on our [Community Discord](https://discord.gg/Aeaw8BPMDx)!
 
