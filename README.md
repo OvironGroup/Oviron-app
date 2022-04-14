@@ -2,6 +2,7 @@
 
 OVIRON is the **open-source community-driven platform** that fosters independace, ownership, creativity, and collaboration between **indie Digital & VR content creators and enthusiasts**.
 
+## The Goal
 OVIRON is a **community-driven project** that aims to be an affordable and open solution for all users of different backgrounds while delivering as different from other entities a high level of transparency that meets the mission and vision of the project.
 
 ## The Mission
