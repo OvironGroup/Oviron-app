@@ -1,6 +1,9 @@
-![OVIRON, the platform for the indie Digital & VR content creation community](https://raw.githubusercontent.com/OvironGroup/Oviron-app/main/docs/OVIRON%20GitHub%20banner.jpg)
+![OVIRON, the platform for the indie Digital & VR content creation community](https://raw.githubusercontent.com/OvironGroup/Oviron-app/main/docs/OVIRON%20GitHub%20banner%20%E2%80%93%20large.jpg)
 
 OVIRON is the **open-source community-driven platform** that fosters independace, ownership, creativity, and collaboration between **indie Digital & VR content creators and enthusiasts**.
+
+## Contact us
+Get in touch with us and interact with the community on our [Community Discord](https://discord.gg/Aeaw8BPMDx)!
 
 ## Prerequisites
 
@@ -50,9 +53,6 @@ This command shouldn't be executed in local environment. It is used by AWS after
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Contact us
-🤗 Get in touch with us and interact with the community on the [Community Discord](https://discord.gg/Aeaw8BPMDx)!
 
 ## License
 
